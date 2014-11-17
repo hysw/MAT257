@@ -1,0 +1,71 @@
+\usepackage{calc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{framed}
+\usepackage{changepage}
+%\usepackage{showframe}
+\definecolor{subparagraph-color}{HTML}{BFDFCF}
+\newcommand{\QuestionId}[1]{\texttt{\textbf{[#1]}}}
+\newcommand{\SubQuestionId}[1]{\texttt{\textit{\textbf{#1.}}}}
+\newcommand{\SubQuestion}[1]{\texttt{\textit{#1}}}
+\newcommand{\SubParagraph}[2][0.5cm]{\hspace*{#1}\begin{minipage}{\linewidth-#1}#2\end{minipage}}
+\newcommand{\SubProof}[2][0.5cm]{\hspace*{#1}{\color{subparagraph-color}\vrule width 0.3pt}\hspace*{3pt}\begin{minipage}{\textwidth-#1-3.3pt}#2\end{minipage}}
+\newcommand{\FullQuestion}[1]{\begin{minipage}{\linewidth}#1\end{minipage}}
+\newcommand{\AssignmentInfo}[3]{\begin{flushright}#1\\Tian Ze(Peter) Chen [1000699808]\\#2\end{flushright}}
+
+%
+%
+%
+%
+%
+  
+\newenvironment{DefQuestion}[1]{%
+%\centerline{#1}%
+#1\par%
+\vspace*{\dimexpr-\parskip-\baselineskip+3pt}
+\noindent\rule{\linewidth}{2.0pt}%
+%\vspace*{\dimexpr-\parskip}
+\begin{adjustwidth}{0.5cm}{0.5cm}%
+}{%
+\end{adjustwidth}%
+}
+
+\newenvironment{DefSubQuestion}[1]{%
+%\centerline{#1}%
+\begin{minipage}{\linewidth}%
+\vspace*{5pt}
+#1\par%
+\vspace*{\dimexpr-\parskip-\baselineskip+1pt}
+\noindent\rule{\linewidth}{0.4pt}\par%
+\vspace*{\dimexpr-\parskip+5pt}%
+\begin{adjustwidth}{0.5cm}{0.5cm}%
+\begin{minipage}{\linewidth}%
+}{%
+\end{minipage}%
+\end{adjustwidth}%
+\end{minipage}%
+}
+
+% \newenvironment{DefQuestion}[1]{%
+% \vspace{1ex}
+% %\par\hbox{\centerline{#1}\strut}{\hrule height 3pt}%
+% \centerline{#1}%
+% \rule{\linewidth}{0.4pt}%
+% \begin{adjustwidth}{0.5cm}{0.5cm}%
+% }{%
+% \end{adjustwidth}%
+% }
+% 
+% \newenvironment{DefSubQuestion}[1]{%
+% %\vspace{1ex}
+% %\begin{minipage}{\linewidth}%
+% %\par\hbox{\centerline{#1}\strut}{\hrule height 1pt}%
+% \centerline{#1}%
+% \rule{\linewidth}{0.4pt}%
+% %
+% %\par\hbox{#1\strut}\hrule\rule{0pt}{.3\baselineskip}\\%
+% %\hspace*{0.5cm}\begin{minipage}{\linewidth-1.0cm}%
+% \begin{adjustwidth}{0.5cm}{0.5cm}%
+% }{%
+% \end{adjustwidth}%
+% %\end{minipage}\end{minipage}%
+% }

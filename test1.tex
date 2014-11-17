@@ -1,0 +1,104 @@
+\section{Topics for First Midterm}
+\subsection{Basic topology of metric spaces}
+\begin{description}
+\item[norm] $p:V\to\bR$\hfill\\
+	For all $a\in F$ and all $u,v\in V$
+	\begin{itemize}
+	\item $p(v) \geq 0 \wedge [p(v) = 0 \iff v=0]$ (separates points)
+	\item $p(av)=|a|p(v)$ (absolute homogeneity)
+	\item $p(u + v) \leq p(u) + p(v)$ (triangle inequality)
+	\end{itemize}
+\item[inner product] $\langle x,y\rangle : V\times V \to \bR$\hfill\\
+	For all $x,y,z \in V$ and $c\in\bF$.
+	\begin{itemize}
+	\item $\langle x,y\rangle = \langle y,x\rangle$
+	\item $\langle x+y,z\rangle = \langle x,z\rangle + \langle y,z\rangle$
+	\item $\langle cx,y\rangle = c\langle x,y\rangle = \langle x,cy\rangle$
+	\item $\langle x,x\rangle > 0$ if $x\neq 0$
+	\end{itemize}
+\item[distance functions]$d: X \times X \to \bR$ \hfill\\
+	For all $x, y, z \in X$
+	\begin{itemize}
+	\item $d(x, y)\geq 0$
+	\item $d(x, y) = 0 \iff x=y$
+	\item $d(x, y) = d(y, x)$
+	\item $d(x, z) \leq d(x, y) + d(y, z)$
+	\end{itemize}
+\item[open and closed subsets of metric spaces]\hfill\\
+	open: every point is a interior point \newline
+	closed: iff contains all its limit point
+\item[closure]
+	the set with all its limit points
+\item[interior]
+	union of all open set contained in A
+\item[exterior]
+	union of all open set disjoint from A
+\item[boundary]
+	points that are neither interior nor exterior
+\item[limits] $f:A\subseteq X\to Y$\hfill\\
+$f(x)\to y_0 \textrm{ as } x\to x_0$ if
+$\forall \mathrm{open} V\ni y_0\exists \mathrm{open} U\ni x_0 
+	[x\in U\cap A \wedge x\neq x_0 \to f(x)\in V]$
+\item[continuity] f is cts at $x_0$ if $x_0$ is isolated point or $(\lim_{x\to x_0}f(x)) = f(x_0)$
+\item[Cauchy sequences]
+	
+\item[completeness]
+\item[compact sets] every open cover of $X$ has a finite subcover
+\item[connected sets]
+\item[relatively open sets] p26
+\end{description}
+
+Note, finite intersections and arbitrary unions of open set are open set
+
+Cauchy-Schwarz inequality; all norms on a finite-dimensional vector
+space are equivalent; Bolzano Weierstrass theorem; Heine-Borel theorem; the con-
+tinuous image of a compact set is compact; the continuous image of a connected
+set is connected; intermediate value theorem; extreme value theorem. minima and
+maxima of continuous functions on compact sets
+\subsection{Differentiation}
+
+
+\begin{description}
+\item[\nameref{derivative}]\hfill
+	\begin{itemize}
+		\item definition of the derivative
+		\item partial derivatives
+		\item directional derivatives
+	\end{itemize}
+\item[chain rule]\hfill
+	\begin{itemize}
+	\item$(f\circ g) = (f' \circ g)\cdot g'$
+	\item$\frac{d f}{d x} = \frac{d f}{d g}\cdot \frac{d g}{d x}$
+	\end{itemize}
+\item[\nameref{thm_mvt}] see note
+\item[\nameref{thm_ivft}] see note
+\item[\nameref{thm_ipft}] see note
+\item[continuity and differentiability]\hfill
+	\begin{itemize}
+	\item differentiable implies continuity
+	\item $C^1$ implies differentiable
+	\item $C^2$ implies equality of mixed partial derivatives
+	\end{itemize}
+\item[TODO]\hfill
+	\begin{itemize} 
+	\item Jacobian matrix
+	\item continuously differentiable functions
+	\item higher order derivatives
+	\item gradient
+	\item geometry of the Jacobian, the rows, the columns
+	\end{itemize}
+\end{description}
+
+
+\subsection{Max-min problems}
+Multi-index notation; Taylor’s theorem with remainder; basic facts about the gra-
+dient; critical points; the Hessian; quadratic forms; classification of critical points;
+max-min problems with constraints; Lagrange multipliers.
+General Comments: Should you memorize proofs of theorems? It is very hard to
+memorize all proofs of all theorems. In the long run, it is much more efficient, as well
+as useful and interesting, to first try to understand the proofs, and internalize the
+methods of proof, as well as possible; then to remember just an outline of the proof,
+or some key idea; roughly speaking, the minimum you would need to allow yourself
+to reconstruct the proof out of your base of general knowledge/understanding.
+Remember: it is important to know not simply whether something is true, but why
+it is true.

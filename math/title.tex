@@ -1,0 +1,11 @@
+\usepackage{makeidx}
+\usepackage{color}
+
+\makeindex
+
+\newcommand{\DefTitle}[1]{\index{#1}\texttt{\textbf{\lbrack#1\rbrack}}}
+\newcommand{\DefSubTitle}[1]{\texttt{\textbf{#1}}}
+\newcommand{\DefComment}[1]{\texttt{\textbf{\textcolor{red}{\lbrack#1\rbrack}}}}
+\newcommand{\DefInfo}[1]{{\textcolor[rgb]{0.5,0.5,0.5}{\{#1\}}}}
+
+\newcommand{\needreview}[1]{\textcolor{blue}{#1}}

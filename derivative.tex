@@ -1,0 +1,109 @@
+\section{Differentiation}
+
+\subsection{Derivative}
+\label{derivative}
+
+\subsubsection{Differentiable}
+$f$ is differentiable at $a$ if there is an $n$ by $m$ matrix $B$ such that
+			\[\frac{f(a+h)-f(a)-B\cdot h}{|h|}\to 0
+			\quad\textrm{as}\quad h \to 0\]
+		The matrix B is unique.
+
+\subsubsection{Directional derivative}
+Given $u\in \mathbb{R}^m$ which $u\neq 0$ define
+		\[f'(a;u)=\lim_{t\to 0} \frac{f(a+tu)-f(a)}{t}\]
+		Provide the limit exists.
+
+\subsubsection{Partial derivative}
+Define the $j^\textrm{th}$ partial derivative of $f$ at a
+		to be the directional derivative of $f$ at $a$ with
+		respect to the vector $e_j$, provide derivative exists.
+		\[D_jf(a)=\lim_{t\to 0}\frac{f(a+te_j)-f(a)}{t}\]
+
+\subsection{Theorems}
+\begin{description}
+	\item[Munkers.5.1] \hfill \\
+		If $f$ is differentiable at $a$ then all directional
+		derivative of $f$ at $a$ exist and
+		$f'(a;u)=Df(a)\cdot u$
+		
+	\item[Munkers.5.2] \hfill \\
+		If $f$ is differentiable at $a$ then $f$ is continuous at a.
+		
+	\item[Munkers.5.3] \hfill \\
+		If $f$ is differentiable at $a$
+		then $Df(a)=[D_1f(a) \quad D_2f(a) \quad \cdots \quad D_mf(a)]$.
+		
+	\item[Munkers.5.4] \hfill
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item
+		$[f \textrm{ is differentiable at } a ]
+			\Leftrightarrow
+			\forall i [f_i \textrm{ is differentiable at } a]$.
+			
+		\item
+		If $f$ is differentiable at $a$, then its derivative is the n by m
+		matrix whose $i^\textrm{th}$ row is the derivative of the function $f_i$. $(Df(a))_{i} = Df_i(a)$
+	\end{enumerate}
+\end{description}
+
+\subsection{Continuously Differentiable Functions}
+
+\begin{description}
+	\item[Munkers 6.1] \hfill \\
+		Mean-value Theorem
+		
+	\item[Munkers 6.2] \hfill \\
+		Let A be open in $\mathbb{R}^m$.
+		Suppose that the partial derivative
+		$D_if_i(x)$ of the component function
+		of $f$ exists at each point $x$ of A and are continuous on Av
+		Then $f$ is differentiable at each point of A.
+		
+	\item[Munkers 6.3] \hfill \\
+		Let $A$ be open in $\mathbb{R}^m$, let $f: A \to \mathbb{R}$
+		be a function of class $\mathbf{C}^2$. Then for each $a\in A$:
+		$D_kD_jf(a)=D_jD_kf(a)$.
+\end{description}
+
+\subsection{Inverse Function Theorem}
+\label{thm_ivft}
+Let $A$ be open in $\mathbb{R}^n$.
+	Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
+
+\thmIF
+	$Df(x)$ is invertible at $a\in A$.
+	
+\thmTHEN
+	There exists a neighborhood of $a$ such that
+\begin{itemize}
+	\item $f|_U$ is injective AND $f(U)=V$ open in $\mathbb{R}^n$
+	\item the inverse function is of class $C^r$
+	\item $f^{-1}(y)=[f'(f^{-1}(y))]^{-1}$
+\end{itemize}
+
+
+\subsection{Implicit Function Theorem}
+\label{thm_ipft}
+\begin{description}
+	\item[Munkers 9.1] \hfill \\
+		Let $A$ be open in $\mathbb{R}^{k+n}$, $B$ be open in $\mathbb{R}^k$.
+		
+		Let $f:A\to \mathbb{R}^n$, $g:B\to \mathbb{R}^n$ be differentiable.
+		
+		Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$.
+		
+		\thmIF $f(x, g(x))=0$ AND $\frac{\partial f}{\partial y}$ is invertible
+		
+		\thmTHEN $Dg(x)=-\left[\frac{\partial f}{\partial y}(x,g(x))\right]^{-1}\cdot \frac{\partial f}{\partial x}(x,g(x))$
+\end{description}
+
+Suppose $f:A\to \mathbb{R}^n$ be of class $C^r$.
+
+Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$.
+
+\thmIF $(a, b)\in A$ AND $f(a, b)=0$ AND $\det \frac{\partial f}{\partial y}(a,b)\neq 0$
+
+\thmTHEN There exists $B\in \mathbb{R}^k, a \in B$ and a unique $g:B\to \mathbb{R}^n$ such that
+		$g(a)=b$ AND $\forall x\in B. f(x,g(x))=0$ AND $g$ is $C^r$

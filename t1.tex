@@ -1,0 +1,43 @@
+\section{Measure zero}
+
+\begin{description}
+\item[measure zero] \hfill \\
+	Let $A\subseteq \mathbb{R}^n$. We say $A$ has \underline{measure zero}
+	in $\mathbb{R}^n$ if for every $\epsilon>0$, there is a covering $Q_1, Q_2, \dots$ of $A$
+	by countably many rectangles such that
+	$\sum_{i=1}^\infty v(Q_i)<\epsilon$.
+	\extranote{If this inequality holds, we often say that the \underline{total volume} of the rectangles
+	$Q_1, Q_2, \dots$ is less than $\epsilon$.}
+\item[oscillation] \hfill \\
+	Given $a\in Q$ define $A_\delta=\{f(x)|x\in Q \wedge |x-a|<\delta\}$.
+	Let $M_\delta(f) = \sup A_\delta$, and let $m_\delta(f) = \inf A_\delta$,
+	define oscillation at $f$ by $\mathrm{osc}(f;a)=\inf_{\delta>0}[M_\delta(f)-m_\delta(f)]$.
+\end{description}
+
+\begin{itemize}
+ \item $f$ is cts at $a$ iff $\mathrm{osc}(f;a)=0$
+\end{itemize}
+
+\subsection{}
+\subsubsection{Theorem \refto{Munkers-11.1}}
+
+\begin{enumerate}
+  \item If $B \subseteq A$ and $A$ has measure zero in $\mathbb{R}^n$, the so does B.
+  \item Let $A$ be the union of the collection of sets
+        $A_1, A_2, \ldots$ If each $A_i$ has measure zero, so does $A$.
+  \item A set $A$ has measure zero in $\mathbb{R}^n$ if and only i 
+\end{enumerate}
+
+\subsubsection{Theorem \refto{Munkers-11.2}}
+
+
+
+\subsection{Mean Value Theorem}
+	\label{thm_mvt}
+	\thmIF $\phi:[a,b]\to\mathbb{R}$
+	\begin{itemize}
+		\item $\phi$ is continuous at each point of \textbf{closed} interval $[a, b]$
+		\item $\phi$ is differentiable at each point of \textbf{open} interval $(a, b)$
+	\end{itemize}
+	\thmTHEN There exists a point $c \in (a,b)$ such that
+		$\phi(b)-\phi(a) = \phi'(c)(b-a)$.
