@@ -40,12 +40,16 @@ $f(x)\to y_0 \textrm{ as } x\to x_0$ if
 $\forall \mathrm{open} V\ni y_0\exists \mathrm{open} U\ni x_0 
 	[x\in U\cap A \wedge x\neq x_0 \to f(x)\in V]$
 \item[continuity] f is cts at $x_0$ if $x_0$ is isolated point or $(\lim_{x\to x_0}f(x)) = f(x_0)$
-\item[Cauchy sequences]
-	
+\item[Cauchy sequences] A sequences $\langle x_i\rangle$ is Cauchy if\hfill\\
+	$\forall \varepsilon \exists N [n,m>N\implies |x_m-x_n|<\varepsilon6]$
 \item[completeness]
-\item[compact sets] every open cover of $X$ has a finite subcover
+	A metric space $X$ is complete if every Cauchy sequences converge(to some point in $X$).
+\item[compact sets]
+	every open cover of $X$ has a finite subcover
 \item[connected sets]
+	$X$ cannot be divided into two disjoint nonempty closed/open/clopen sets.
 \item[relatively open sets] p26
+	$A$ is relatively open in $Y\subseteq X$ if $\exists \mathrm{open}U\subseteq X [A=U\cap Y]$
 \end{description}
 
 Note, finite intersections and arbitrary unions of open set are open set
@@ -79,9 +83,18 @@ maxima of continuous functions on compact sets
 	\item $C^1$ implies differentiable
 	\item $C^2$ implies equality of mixed partial derivatives
 	\end{itemize}
+\item[Jacobian matrix]\hfill
+	\begin{equation}
+	 \begin{bmatrix*}
+	  \frac{\partial f_1}{\partial  x} \cdot \\
+	  b\\
+	  c
+	 \end{bmatrix*}
+	\end{equation}
+
 \item[TODO]\hfill
 	\begin{itemize} 
-	\item Jacobian matrix
+	\item 
 	\item continuously differentiable functions
 	\item higher order derivatives
 	\item gradient
