@@ -37,11 +37,11 @@
 	points that are neither interior nor exterior
 \item[limits] $f:A\subseteq X\to Y$\hfill\\
 $f(x)\to y_0 \textrm{ as } x\to x_0$ if
-$\forall \mathrm{open} V\ni y_0\exists \mathrm{open} U\ni x_0 
-	[x\in U\cap A \wedge x\neq x_0 \to f(x)\in V]$
+$\forall \ \mathrm{open} \ V\ni y_0 \ \exists \ \mathrm{open} \ U\ni x_0 
+	\ [x\in U\cap A \wedge x\neq x_0 \to f(x)\in V]$
 \item[continuity] f is cts at $x_0$ if $x_0$ is isolated point or $(\lim_{x\to x_0}f(x)) = f(x_0)$
 \item[Cauchy sequences] A sequences $\langle x_i\rangle$ is Cauchy if\hfill\\
-	$\forall \varepsilon \exists N [n,m>N\implies |x_m-x_n|<\varepsilon6]$
+	$\forall \varepsilon \exists N [n,m>N\implies |x_m-x_n|<\varepsilon]$
 \item[completeness]
 	A metric space $X$ is complete if every Cauchy sequences converge(to some point in $X$).
 \item[compact sets]
@@ -49,10 +49,12 @@ $\forall \mathrm{open} V\ni y_0\exists \mathrm{open} U\ni x_0
 \item[connected sets]
 	$X$ cannot be divided into two disjoint nonempty closed/open/clopen sets.
 \item[relatively open sets] p26
-	$A$ is relatively open in $Y\subseteq X$ if $\exists \mathrm{open}U\subseteq X [A=U\cap Y]$
+	$A$ is relatively open in $Y\subseteq X$ if $\exists$ open $U\subseteq X$ such that $A=U\cap Y$
+\item[Note] finite intersections and arbitrary unions of open set are open set
+\item[Proposition] $f : X \to Y$ is cts iff $\forall$ open $ V \in Y$, $F^{-1}(V)$ is open in $X$.
+\item[BW property] A subset $E \in \mathbb{R}^n$ satisfies the BW property if every suquence has a convergent subsequence.
+\item[BW theorem] $E$ satisfies the BW property iff $E$ is closed and bounded.
 \end{description}
-
-Note, finite intersections and arbitrary unions of open set are open set
 
 Cauchy-Schwarz inequality; all norms on a finite-dimensional vector
 space are equivalent; Bolzano Weierstrass theorem; Heine-Borel theorem; the con-
