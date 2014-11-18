@@ -1,61 +1,80 @@
 \section{Topics for First Midterm}
-\subsection{Basic topology of metric spaces}
+
+
+\subsection{Basic Definations}
+
 \begin{description}
-\item[norm] $p:V\to\bR$\hfill\\
-	For all $a\in F$ and all $u,v\in V$
-	\begin{itemize}
-	\item $p(v) \geq 0 \wedge [p(v) = 0 \iff v=0]$ (separates points)
-	\item $p(av)=|a|p(v)$ (absolute homogeneity)
-	\item $p(u + v) \leq p(u) + p(v)$ (triangle inequality)
-	\end{itemize}
-\item[inner product] $\langle x,y\rangle : V\times V \to \bR$\hfill\\
-	For all $x,y,z \in V$ and $c\in\bF$.
-	\begin{itemize}
-	\item $\langle x,y\rangle = \langle y,x\rangle$
-	\item $\langle x+y,z\rangle = \langle x,z\rangle + \langle y,z\rangle$
-	\item $\langle cx,y\rangle = c\langle x,y\rangle = \langle x,cy\rangle$
-	\item $\langle x,x\rangle > 0$ if $x\neq 0$
-	\end{itemize}
-\item[distance functions]$d: X \times X \to \bR$ \hfill\\
-	For all $x, y, z \in X$
-	\begin{itemize}
-	\item $d(x, y)\geq 0$
-	\item $d(x, y) = 0 \iff x=y$
-	\item $d(x, y) = d(y, x)$
-	\item $d(x, z) \leq d(x, y) + d(y, z)$
-	\end{itemize}
-\item[open and closed subsets of metric spaces]\hfill\\
-	open: every point is a interior point \newline
-	closed: iff contains all its limit point
-\item[closure]
+\item[norm]\hfill\\
+	see note \hyperref[def:norm]{basic:definations:norm}
+\item[inner product]\hfill\\
+	see note \hyperref[def:innerprod]{basic:definations:inner product}
+\item[metric / distance functions]\hfill\\
+	see note \hyperref[def:metric]{basic:definations:metric}
+\item[open and closed subset of metric space]\hfill\\
+	see note \hyperref[def:metric]{basic:definations:metricspace-openset}
+		and \hyperref[def:metric]{basic:definations:metricspace-closedset}
+\end{description}
+
+\subsection{Basic Theorems}
+\begin{description}
+\item[EVT] \hyperref[thm:evt]{Extreme value theorem}
+\item[IVT] \hyperref[thm:ivt]{Intermediate value theorem}
+\item[MVT] \hyperref[thm:mvt]{Mean value theorem}
+\item[IVFT] \nameref{thm_ivft}
+\item[IPFT] \nameref{thm_ipft}
+\end{description}
+
+\subsection{Basic topology of metric spaces}
+
+\begin{description}
+
+\item[closure]\hfill\\
 	the set with all its limit points
-\item[interior]
+
+\item[interior]\hfill\\
 	union of all open set contained in A
-\item[exterior]
+
+\item[exterior]\hfill\\
 	union of all open set disjoint from A
-\item[boundary]
+
+\item[boundary]\hfill\\
 	points that are neither interior nor exterior
+
 \item[limits] $f:A\subseteq X\to Y$\hfill\\
 $f(x)\to y_0 \textrm{ as } x\to x_0$ if
-$\forall \ \mathrm{open} \ V\ni y_0 \ \exists \ \mathrm{open} \ U\ni x_0 
+$\forall \ \mathrm{open} \ V\ni y_0 \ \exists \ \mathrm{open} \ U\ni x_0
 	\ [x\in U\cap A \wedge x\neq x_0 \to f(x)\in V]$
-\item[continuity] f is cts at $x_0$ if $x_0$ is isolated point or $(\lim_{x\to x_0}f(x)) = f(x_0)$
+
+\item[continuity]
+	f is cts at $x_0$ if $x_0$ is isolated point or $(\lim_{x\to x_0}f(x)) = f(x_0)$
+
 \item[Cauchy sequences] A sequences $\langle x_i\rangle$ is Cauchy if\hfill\\
-	$\forall \varepsilon \exists N [n,m>N\implies |x_m-x_n|<\varepsilon]$
+	$\forall \varepsilon \exists N [n,m>N\implies d(x_m, x_n)<\varepsilon]$
+
 \item[completeness]
 	A metric space $X$ is complete if every Cauchy sequences converge(to some point in $X$).
+
 \item[compact sets]
 	every open cover of $X$ has a finite subcover
+
 \item[connected sets]
 	$X$ cannot be divided into two disjoint nonempty closed/open/clopen sets.
+
 \item[relatively open sets] p26
 	$A$ is relatively open in $Y\subseteq X$ if $\exists$ open $U\subseteq X$ such that $A=U\cap Y$
-\item[Note] finite intersections and arbitrary unions of open set are open set
-\item[Proposition] $f : X \to Y$ is cts iff $\forall$ open $ V \in Y$, $F^{-1}(V)$ is open in $X$. Similarly for closed.
-\item[BW property] A subset $E \in \mathbb{R}^n$ satisfies the BW property if every suquence has a convergent subsequence.
-\item[BW theorem] $E \in \mathbb{R}^n$ satisfies the BW property iff $E$ is closed and bounded.
+
+\item[Proposition]
+	$f : X \to Y$ is cts iff $\forall$ open $ V \in Y$, $F^{-1}(V)$ is open in $X$.
+	Similarly for closed.
+
+\item[Bolzano–Weierstrass property] \hfill\\
+	A subset $E \in \mathbb{R}^n$ satisfies the BW property if every suquence has a convergent subsequence.
+
+\item[Bolzano–Weierstrass theorem]
+	$E \in \mathbb{R}^n$ satisfies the BW property iff $E$ is closed and bounded.
+
 \item[Heine-Borel theorem] $E \in \mathbb{R}^n$ is compact iff $E$ is closed and bounded.
-\item[Application] Suppose $f:X \to Y$ is continuous and X is compact then $f(X)$ is compact
+\item[Application/(topological invariant)] Suppose $f:X \to Y$ is continuous and X is compact then $f(X)$ is compact
 \item[Extreme value theorem] Suppose $f:X \to \mathbb{R}$ is continuous and X is compact then $\exists x_0 \in X$
 such that $f(x) \leq f(x_0) \forall x \in X$.
 \item[Path connected] A set $E$ is path connected if $\forall x, y \in E$, $\exists$ continuous
@@ -89,9 +108,6 @@ maxima of continuous functions on compact sets
 	\item$(f\circ g) = (f' \circ g)\cdot g'$
 	\item$\frac{d f}{d x} = \frac{d f}{d g}\cdot \frac{d g}{d x}$
 	\end{itemize}
-\item[\nameref{thm_mvt}] see note
-\item[\nameref{thm_ivft}] see note
-\item[\nameref{thm_ipft}] see note
 \item[continuity and differentiability]\hfill
 	\begin{itemize}
 	\item differentiable implies continuity
@@ -138,3 +154,6 @@ or some key idea; roughly speaking, the minimum you would need to allow yourself
 to reconstruct the proof out of your base of general knowledge/understanding.
 Remember: it is important to know not simply whether something is true, but why
 it is true.
+
+
+

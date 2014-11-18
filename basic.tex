@@ -1,0 +1,60 @@
+\section{Basic knowledge}
+
+\subsection{Definations}
+\begin{description}
+\item[norm] A function $p:V\to\bR$ such that\phantomsection\label{def:norm}\hfill\\
+	For all $a\in F$ and all $u,v\in V$
+	\begin{itemize}
+	\item $p(v) \geq 0 \wedge [p(v) = 0 \iff v=0]$ (separates points)
+	\item $p(av)=|a|p(v)$ (absolute homogeneity)
+	\item $p(u + v) \leq p(u) + p(v)$ (triangle inequality)
+	\end{itemize}
+
+\item[inner product]\phantomsection\label{def:innerprod}
+	A function $\langle x,y\rangle : V\times V \to \bR$ such that \hfill\\
+	For all $x,y,z \in V$ and $c\in\bF$.
+	\begin{itemize}
+	\item $\langle x,y\rangle = \langle y,x\rangle$
+	\item $\langle x+y,z\rangle = \langle x,z\rangle + \langle y,z\rangle$
+	\item $\langle cx,y\rangle = c\langle x,y\rangle = \langle x,cy\rangle$
+	\item $\langle x,x\rangle > 0$ if $x\neq 0$
+	\end{itemize}
+
+\item[metric]\phantomsection\label{def:metric}
+	A function $d: X \times X \to \bR$ such that \hfill\\
+	For all $x, y, z \in X$
+	\begin{itemize}
+	\item $d(x, y)\geq 0$
+	\item $d(x, y) = 0 \iff x=y$
+	\item $d(x, y) = d(y, x)$
+	\item $d(x, z) \leq d(x, y) + d(y, z)$
+	\end{itemize}
+
+\item[$\epsilon$-neighborhood]$\lU(x;\epsilon)=\{y|d(x,y)<\epsilon\}$
+
+\item[open set in metric space]\phantomsection\label{def:metric:openset}
+	A set $U\subseteq X$ is said to be open in $X$ if\hfill\\
+		$\forall x\in U\exists \epsilon>0 [\lU(x;\epsilon)\subseteq U]$\newline
+	\extranote{note that finite intersections and arbitrary unions of open set are open set}
+\item[closed set in metric space]\phantomsection\label{def:metric:closedset}
+	A set contains all its limit point.\hfill\\
+	\extranote{note that closed set is complement of open set in topology}
+\end{description}
+
+\subsection{Theorems}
+\begin{description}
+\item[Extreme value theorem]\phantomsection\label{thm:evt}\hfill\\
+	Suppose $f:X \to \mathbb{R}$ is continuous and X is compact, \newline
+	then $\exists x_0 \in X$ such that $\forall x \in X. f(x) \leq f(x_0)$.
+\item[Intermediate Value Theorem]\phantomsection\label{thm:ivt}\hfill\\
+	Suppose $E \in \mathbb{R}$ is connected and $f: E \to \mathbb{R}$ is continuous. \newline
+	Suppose $f(x) = a$ and $f(y) = b$ for some $x, y \in E$ and $a < b$. \newline
+	Then $\forall a < c < b \exists$ some $z \in E$ such that $f(z) = c$.
+\item[Mean Value Theorem]\phantomsection\label{thm:mvt}\hfill\\
+	Suppose $\phi:[a,b]\to\mathbb{R}$ is
+	\begin{itemize}
+		\item continuous at each point of \textbf{closed} interval $[a, b]$
+		\item differentiable at each point of \textbf{open} interval $(a, b)$
+	\end{itemize}
+	Then there exists a point $c \in (a,b)$ such that $\phi(b)-\phi(a) = \phi'(c)(b-a)$.
+\end{description}
