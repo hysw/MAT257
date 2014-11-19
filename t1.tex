@@ -33,6 +33,13 @@
 
 
 
-\subsection{Taylor’s theorem[TODO]}
+\subsection{Taylor’s theorem}
 \label{taylor}
-TODO, theorem, remainder
+Suppose $f:\mathbb{R}^n \to \mathbb{R}$ is of class $C^k$ on an open convex set $S$. If $a \in S$ and $a+h \in S$, then
+\begin{align*} 
+f(a+h) = \sum\limits_{|\alpha| \leq k} \frac{\partial^\alpha f(a)}{\alpha!}h^\alpha + R_{a,k}(h),
+\end{align*} 
+If $f$ is of class $C^{k+1}$ on $S$, for some $c \in (0, 1)$ we have
+\begin{align*} 
+ R_{a,k}(h) = \sum\limits_{|\alpha| = k+1} \frac{\partial^\alpha f(a+ch)}{\alpha!}h^\alpha
+\end{align*} 
