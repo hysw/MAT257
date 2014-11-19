@@ -133,14 +133,38 @@ maxima of continuous functions on compact sets
 
 \begin{description}
 \item[\nameref{multiindex}] see note
-\item[\nameref{taylor}] see note
-\item[basic facts about the gradient]
-\item[critical points]
-\item[the Hessian]
-\item[quadratic forms]
-\item[classification of critical points]
-\item[max-min problems with constraints]
+\item[\nameref{taylor}] The taylor series is useful at critical points because if $a$ is a critical point of $f$ and $f$ is $C^2$ at $a$ then
+\begin{align*} 
+f(a+h) = f(a) + \frac{1}{2}\sum\limits_{i, j = 1}^{n} \partial_i \partial_j f(a)h^i h^j + R_{a,2}(h)
+\end{align*}
+where
+\begin{align*}
+R_{a,2}(h) \rightarrow 0 \text{ as } x \rightarrow 0
+\end{align*}
+\item[Basic facts about the gradient] $\nabla f(a)$ points in the direction of maximal increase and $|\nabla f(a)|$ is the rate of change of $f$ in the direction of fastest increase. $\nabla f(a)$ is orthogonal to the level set of $f$ that passes through $a$.
+\item[Critical points] $a \in \mathbb{R}$ is said to be a critical point of $f$ if $Df = 0$.
+\item[Proposition] If $f$ has a local maximum/minimum at $a$ and $f$ is differentiable at $a$ then $Df(a) = 0$.
+\item[the Hessian] $H(f) = (D_i D_j f(a))$ which has $n$ eigenvalues counting multiplicity.
+\item[Minors] A $k \times k$ principle minor of a matrix $M$ is the matrix restricted to the first $k$ rows and the first $k$ columns.
+\item[Quadratic forms] Completing the square.
+\item[Proposition] A symmetric matrix $h$ is positive definate if the determinant of all its principle $k \times k$ minors are positive.
+\item[Classification of critical points]
+Suppose $f: \mathbb{R}^n \to \mathbb{R}^n$ is $c^2$, $a$ is a critical point. Then $H(f)$ has $n$ eigenvalues (counting multiplicity).
+	\begin{itemize}
+		\item $a$ is a local minimum of all eigenvalues are positive.
+		\item $a$ is a local maximum if all eigenvalues are negative.
+		\item $a$ is a saddle point if $k$ eigenvalues are positive and $n-k$ are negative.
+		\item $a$ is a non-degenerate critical point if all eigenvalues are non-zero
+	\end{itemize}
+\item[Max-min problems with constraints]
+Apply the classification of critical points for points in the interior. On the boundary use lagrange multipliers.
 \item[Lagrange multipliers]
+Consider the functions $f: \mathbb{R}^n \to \mathbb{R}$ and $g_1: \mathbb{R}^n \to \mathbb{R}$ and $g_2: \mathbb{R}^n \to \mathbb{R}$. We want to find the extreme values for $f$ subject to $g_1 = c_1$ and $g_2 = c_2$. Then we just need find the values $a \in \mathbb{R}^n$ that satisfy the system of equations:
+	\begin{itemize}
+		\item $\nabla f(a) = \mu \nabla g_1(a) + \lambda \nabla g_2(a)$
+		\item $g_1(a) = c_1$
+		\item $g_2(a) = c_2$
+	\end{itemize}
 \end{description}
 
 
