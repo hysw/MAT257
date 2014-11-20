@@ -1,50 +1,62 @@
-\section{Differentiation}
+\section{Differential Calculus}
 
-\subsection{Derivative}
-\label{derivative}
 
-\subsubsection{Differentiable}
-$f$ is differentiable at $a$ if there is an $n$ by $m$ matrix $B$ such that
+\subsection{Definitions}
+\begin{description}
+\item[differentiable]
+	\phantomsection\label{def:differentiable}
+	$f$ is differentiable at $a$ if there is an $n$ by $m$ matrix $B$ such that
 			\[\frac{f(a+h)-f(a)-B\cdot h}{|h|}\to 0
 			\quad\textrm{as}\quad h \to 0\]
 		The matrix B is unique.
 
-\subsubsection{Directional derivative}
-Given $u\in \mathbb{R}^m$ which $u\neq 0$ define
+\item[Directional derivative]
+	\phantomsection\label{def:directional_derivative}
+	Given $u\in \mathbb{R}^m$ which $u\neq 0$ define
 		\[f'(a;u)=\lim_{t\to 0} \frac{f(a+tu)-f(a)}{t}\]
 		Provide the limit exists.
 
-\subsubsection{Partial derivative}
-Define the $j^\textrm{th}$ partial derivative of $f$ at a
+\item[Partial derivative]
+	\phantomsection\label{def:partial_derivative}
+	Define the $j^\textrm{th}$ partial derivative of $f$ at a
 		to be the directional derivative of $f$ at $a$ with
 		respect to the vector $e_j$, provide derivative exists.
 		\[D_jf(a)=\lim_{t\to 0}\frac{f(a+te_j)-f(a)}{t}\]
 
-\subsubsection{Continuously Differentiable}
-A function is $C^1$ if all of its partial derivatives are continous. A function is $C^r$ if all of its partial derivatives are $C^{r-1}$.
+\end{description}
 
-\subsection{Theorems}
+\subsection{Notations}
 \begin{description}
-	\item[Munkers.5.1] \hfill \\
+	\item[$Df(a)$]    : derivative of $f$ at $a$
+	\item[$f'(a;u)$]  : directional derivative of $f$ at $a$ respect to vector $u$.
+	\item[$D_jf(a)$]  : $j^\textrm{th}$partial derivative of $f$ at $a$.
+	\item[$f_i$]      : $i^\textrm{th}$ component function of $f$.
+	\item[$\nabla g$] : gradient of $g$, $\nabla g = \mathbf{grad} g = \sum_i (D_ig)e_i$
+	\item[$J f$]      : Jacobian matrix, $J_{ij} = D_jf_i(a)$
+\end{description}
+
+\subsection{Differentiability Theorems}
+\begin{description}
+	\item[Theorems Munkers.5.1] \hfill \\
 		If $f$ is differentiable at $a$ then all directional
 		derivative of $f$ at $a$ exist and
 		$f'(a;u)=Df(a)\cdot u$
-		
-	\item[Munkers.5.2] \hfill \\
+
+	\item[Theorems Munkers.5.2] \hfill \\
 		If $f$ is differentiable at $a$ then $f$ is continuous at a.
-		
-	\item[Munkers.5.3] \hfill \\
+
+	\item[Theorems Munkers.5.3] \hfill \\
 		If $f$ is differentiable at $a$
 		then $Df(a)=[D_1f(a) \quad D_2f(a) \quad \cdots \quad D_mf(a)]$.
-		
-	\item[Munkers.5.4] \hfill
+
+	\item[Theorems Munkers.5.4] \hfill
 	\begin{enumerate}
 		\renewcommand{\labelenumi}{\alph{enumi}.}
 		\item
 		$[f \textrm{ is differentiable at } a ]
 			\Leftrightarrow
 			\forall i [f_i \textrm{ is differentiable at } a]$.
-			
+
 		\item
 		If $f$ is differentiable at $a$, then its derivative is the n by m
 		matrix whose $i^\textrm{th}$ row is the derivative of the function $f_i$. $(Df(a))_{i} = Df_i(a)$
@@ -53,12 +65,15 @@ A function is $C^1$ if all of its partial derivatives are continous. A function 
 
 \subsection{Continuously Differentiable Functions}
 
+A function is $C^1$ if all of its partial derivatives are continous.
+A function is $C^r$ if all of its partial derivatives are $C^{r-1}$.
+
 \begin{description}
 	\item[Munkers 6.1] \hfill \\
 		If $f:[a,b] \to \mathbb{R}$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists $c \in (a,b)$ such that $f(b)-f(a) = f'(c)(b-a)$.
 
 	\item[Munkers 7.3] \hfill \\
-		Let $A$ be open in $\mathbb{R}^m$; let $f:A \to \mathbb{R}$ be differentiable on $A$. If $A$ contains the line segment with end points $a$ and $a+h$, then there is a point $c = a+th$ with $0 < t < 1$ of this line segment such that $f(a+h)-f(a) = (Df(c))h$.		
+		Let $A$ be open in $\mathbb{R}^m$; let $f:A \to \mathbb{R}$ be differentiable on $A$. If $A$ contains the line segment with end points $a$ and $a+h$, then there is a point $c = a+th$ with $0 < t < 1$ of this line segment such that $f(a+h)-f(a) = (Df(c))h$.
 
 	\item[Munkers 6.2] \hfill \\
 		Let A be open in $\mathbb{R}^m$.
@@ -66,7 +81,7 @@ A function is $C^1$ if all of its partial derivatives are continous. A function 
 		$D_if_i(x)$ of the component function
 		of $f$ exists at each point $x$ of A and are continuous on A.
 		Then $f$ is differentiable at each point of A.
-		
+
 	\item[Munkers 6.3] \hfill \\
 		Let $A$ be open in $\mathbb{R}^m$, let $f: A \to \mathbb{R}$
 		be a function of class $\mathbf{C}^2$. Then for each $a\in A$:
@@ -76,9 +91,9 @@ A function is $C^1$ if all of its partial derivatives are continous. A function 
 \subsection{Chain Rule}
 Let $A \subset \mathbb{R}^m$. Let $B \subset \mathbb{R}^n$.
 Let $f : A \to \mathbb{R}^n$ and $g : B\to \mathbb{R}^p$, with $f(A) \subset B$. Suppose $f(a) = b$. If $f$ is diferentiable at $a$ and $g$ is differentiable at $b$, then the composite function $g \circ f$ is differentiable at $a$. Furthermore,
-\begin{align*} 
+\begin{align*}
 D(g \circ f)(a) = Dg(b) \cdot Df(a)
-\end{align*} 
+\end{align*}
 
 \subsection{Inverse Function Theorem}
 \label{thm_ivft}
@@ -87,7 +102,7 @@ Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
 
 \thmIF
 	$\ Df(x)$ is invertible at $a\in A$.
-	
+
 \thmTHEN
 	$\ $There exists a neighborhood of $a$ such that
 \begin{itemize}
@@ -102,13 +117,13 @@ Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
 \begin{description}
 	\item[Munkers 9.1] \hfill \\
 		Let $A$ be open in $\mathbb{R}^{k+n}$, $B$ be open in $\mathbb{R}^k$.
-		
+
 		Let $f:A\to \mathbb{R}^n$, $g:B\to \mathbb{R}^n$ be differentiable.
-		
+
 		Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$.
-		
+
 		\thmIF $\ f(x, g(x))=0$ AND $\frac{\partial f}{\partial y}$ is invertible
-		
+
 		\thmTHEN $\ Dg(x)=-\left[\frac{\partial f}{\partial y}(x,g(x))\right]^{-1}\cdot \frac{\partial f}{\partial x}(x,g(x))$
 \end{description}
 
@@ -120,3 +135,14 @@ Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$
 
 \thmTHEN $\ $There exists $B\in \mathbb{R}^k, a \in B$ and a unique $g:B\to \mathbb{R}^n$ such that
 		$g(a)=b$ AND $\forall x\in B. f(x,g(x))=0$ AND $g$ is $C^r$
+
+\subsection{Taylor’s theorem}
+\label{thm:taylor}
+Suppose $f:\mathbb{R}^n \to \mathbb{R}$ is of class $C^k$ on an open convex set $S$. If $a \in S$ and $a+h \in S$, then
+\begin{align*}
+f(a+h) = \sum\limits_{|\alpha| \leq k} \frac{\partial^\alpha f(a)}{\alpha!}h^\alpha + R_{a,k}(h),
+\end{align*}
+If $f$ is of class $C^{k+1}$ on $S$, for some $c \in (0, 1)$ we have
+\begin{align*}
+ R_{a,k}(h) = \sum\limits_{|\alpha| = k+1} \frac{\partial^\alpha f(a+ch)}{\alpha!}h^\alpha
+\end{align*}

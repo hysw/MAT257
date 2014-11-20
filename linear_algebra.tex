@@ -1,0 +1,23 @@
+\section{Linear Algebra}
+
+\subsection{Definitions}
+
+\begin{description}
+\item[norm] A function $p:V\to\bR$ such that\phantomsection\label{def:norm}\hfill\\
+	For all $a\in F$ and all $u,v\in V$
+	\begin{itemize}
+	\item $p(v) \geq 0 \wedge [p(v) = 0 \iff v=0]$ (separates points)
+	\item $p(av)=|a|p(v)$ (absolute homogeneity)
+	\item $p(u + v) \leq p(u) + p(v)$ (triangle inequality)
+	\end{itemize}
+
+\item[inner product]\phantomsection\label{def:innerprod}
+	A function $\langle x,y\rangle : V\times V \to \bR$ such that \hfill\\
+	For all $x,y,z \in V$ and $c\in\bF$.
+	\begin{itemize}
+	\item $\langle x,y\rangle = \langle y,x\rangle$
+	\item $\langle x+y,z\rangle = \langle x,z\rangle + \langle y,z\rangle$
+	\item $\langle cx,y\rangle = c\langle x,y\rangle = \langle x,cy\rangle$
+	\item $\langle x,x\rangle > 0$ if $x\neq 0$
+	\end{itemize}
+\end{description}
