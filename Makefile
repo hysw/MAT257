@@ -1,12 +1,15 @@
-all: MAT257.pdf
+all: MAT257.pdf clean_useless
+
+pdf: MAT257.pdf
 
 MAT257.pdf: *.tex
 	pdflatex MAT257.tex
+	# texindy MAT257.idx
 	# note, run twice to ensure indexing is correct
 	pdflatex MAT257.tex
 
 clean_useless:
-	rm -f *.{aux,toc,out,idx,log,backup} *~
+	rm -f *.{aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg} *~
 
 clean: clean_useless
 	rm -f *.pdf
@@ -14,4 +17,4 @@ clean: clean_useless
 commit: MAT257.pdf clean_useless
 	git commit -a -m "update at `date --rfc-2822`" && git pull && git push
 
-.PHONY: clean commit clean_useless
+.PHONY: pdf clean commit clean_useless

@@ -11,19 +11,37 @@
 \input{math/math.tex}
 \input{math/title.tex}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+%\usepackage[nomain,acronym,xindy,toc]{glossaries}
+%\makeglossaries
+%\usepackage[xindy]{imakeidx}
+%\makeindex
 
 \newcommand{\refto}[1]{\{#1\}}
 \newcommand{\extranote}[1]{{\color{Black!30}#1}}
 \newcommand{\thmIF}{\textbf{\color{Red!50!Black}IF}}
 \newcommand{\thmTHEN}{\textbf{\color{Blue!50!Black}THEN}}
 
-\title{MAT257 Note}
+\title{UofT-MAT257-2014 Note}
+\author{hysw, etc(will add later)...}
+\date{\today\\ at \currenttime}
+
+\pagestyle{fancy}
+\lhead{Page \thepage}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+%\rfoot{Compiled on \today\ at \currenttime}
+%\cfoot{}
+%\lfoot{Page \thepage}
 
 \begin{document}
 
+\maketitle
+
 \tableofcontents
 
-\include{test1}
 \include{basic}
 \include{linear_algebra}
 \include{topology}
@@ -31,5 +49,9 @@
 \include{calculus_general}
 \include{calculus_differential}
 \include{calculus_integral}
-
+\include{test1}
+\include{todo}
+\include{copyright}
+%\printglossaries
+%\printindex
 \end{document}
