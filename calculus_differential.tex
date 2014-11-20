@@ -114,6 +114,15 @@ Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
 
 \subsection{Implicit Function Theorem}
 \label{thm_ipft}
+Suppose $f:A\to \mathbb{R}^n$ be of class $C^r$.
+
+Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$.
+
+\thmIF $\ (a, b)\in A$ AND $f(a, b)=0$ AND $\det \frac{\partial f}{\partial y}(a,b)\neq 0$
+
+\thmTHEN $\ $There exists $B\in \mathbb{R}^k, a \in B$ and a unique $g:B\to \mathbb{R}^n$ such that
+		$g(a)=b$ AND $\forall x\in B. f(x,g(x))=0$ AND $g$ is $C^r$
+
 \begin{description}
 	\item[Munkers 9.1] \hfill \\
 		Let $A$ be open in $\mathbb{R}^{k+n}$, $B$ be open in $\mathbb{R}^k$.
@@ -126,15 +135,6 @@ Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
 
 		\thmTHEN $\ Dg(x)=-\left[\frac{\partial f}{\partial y}(x,g(x))\right]^{-1}\cdot \frac{\partial f}{\partial x}(x,g(x))$
 \end{description}
-
-Suppose $f:A\to \mathbb{R}^n$ be of class $C^r$.
-
-Write $f$ in the form $f(x, y)$, for $x\in \mathbb{R}^k$ and $y\in \mathbb{R}^n$.
-
-\thmIF $\ (a, b)\in A$ AND $f(a, b)=0$ AND $\det \frac{\partial f}{\partial y}(a,b)\neq 0$
-
-\thmTHEN $\ $There exists $B\in \mathbb{R}^k, a \in B$ and a unique $g:B\to \mathbb{R}^n$ such that
-		$g(a)=b$ AND $\forall x\in B. f(x,g(x))=0$ AND $g$ is $C^r$
 
 \subsection{Taylor’s theorem}
 \label{thm:taylor}
