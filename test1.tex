@@ -166,6 +166,13 @@ Suppose $f: \mathbb{R}^n \to \mathbb{R}^n$ is $c^2$, $a$ is a critical point. Th
 		\item $a$ is a saddle point if $k$ eigenvalues are positive and $n-k$ are negative.
 		\item $a$ is a non-degenerate critical point if all eigenvalues are non-zero
 	\end{itemize}
+\item[Folland 2.82] Suppose $f$ is of class $C^2$ on an open set in $\mathbb{R}^2$ containing the point a, and suppose $Df(a) = 0$. Let $\alpha = \partial_1^2 f(a)$, $\beta = \partial_1\partial_2 f(a)$, $\gamma = \partial_2^2 f(a)$. Then:
+	\begin{itemize}
+		\item If $\alpha\gamma - \beta^2 < 0$, $f$ has a saddle point at $a$.
+		\item If $\alpha\gamma - \beta^2 > 0$ and $\alpha > 0$, $f$ has a local minimum at $a$.
+		\item If $\alpha\gamma - \beta^2 > 0$ and $\alpha < 0$, $f$ has a local maximum at $a$.
+		\item If $\alpha\gamma - \beta^2 = 0$, no conclusion can be drawn.
+	\end{itemize}
 \item[Max-min problems with constraints]
 Apply the classification of critical points for points in the interior. On the boundary use lagrange multipliers.
 \item[Lagrange multipliers]
