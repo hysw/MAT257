@@ -59,6 +59,7 @@ A function is $C^1$ if all of its partial derivatives are continous. A function 
 
 	\item[Munkers 7.3] \hfill \\
 		Let $A$ be open in $\mathbb{R}^m$; let $f:A \to \mathbb{R}$ be differentiable on $A$. If $A$ contains the line segment with end points $a$ and $a+h$, then there is a point $c = a+th$ with $0 < t < 1$ of this line segment such that $f(a+h)-f(a) = (Df(c))h$.		
+
 	\item[Munkers 6.2] \hfill \\
 		Let A be open in $\mathbb{R}^m$.
 		Suppose that the partial derivative
@@ -72,10 +73,17 @@ A function is $C^1$ if all of its partial derivatives are continous. A function 
 		$D_kD_jf(a)=D_jD_kf(a)$.
 \end{description}
 
+\subsection{Chain Rule}
+Let $A \subset \mathbb{R}^m$. Let $B \subset \mathbb{R}^n$.
+Let $f : A \to \mathbb{R}^n$ and $g : B\to \mathbb{R}^p$, with $f(A) \subset B$. Suppose $f(a) = b$. If $f$ is diferentiable at $a$ and $g$ is differentiable at $b$, then the composite function $g \circ f$ is differentiable at $a$. Furthermore,
+\begin{align*} 
+D(g \circ f)(a) = Dg(b) \cdot Df(a)
+\end{align*} 
+
 \subsection{Inverse Function Theorem}
 \label{thm_ivft}
 Let $A$ be open in $\mathbb{R}^n$.
-	Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
+Let $f:A\to\mathbb{R}^n$ be of class $C^r$.
 
 \thmIF
 	$\ Df(x)$ is invertible at $a\in A$.
