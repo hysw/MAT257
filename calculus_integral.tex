@@ -6,5 +6,15 @@
 	If $f$ is continuous on $[a, b]$, and if $F(X)=\int_a^x f$
 	for $x\in[a,b]$, then $F'(x)$ exists and equals $f(x)$.
 \item
-	If ...
+	If $f$ is continious on $[a, b]$,
+	and if $g$ is a function such that
+	$g'(x)=f(x)$ for $x\in[a,b]$ then $\int_a^b f = g(b) - g(a)$
 \end{itemize}
+
+
+\subsection{Fubini's theorem}
+Let $Q=A\times B$, where $A$ is a rectangle in $\bR^k$ and $A$ is a rectangle in $\bR^n$.
+If f is bounded function and integrable over $Q$, then
+$\underline{\int_{y\in B}} f(x,y)$ and $\overline{\int_{y\in B}} f(x,y)$ are integrable over $A$
+and
+\[\int_Q f = \int_{x\in A}\underline{\int_{y\in B}} f(x,y) = \int_{x\in A}\overline{\int_{y\in B}} f(x,y)\]
