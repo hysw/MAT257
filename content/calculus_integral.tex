@@ -1,0 +1,67 @@
+\section{Integral Calculus}
+Note, Riemann Integral was taught in this class.
+
+
+\subsection{Definitions}
+\begin{description}
+\item[rectangle (in $\bR^n$)] $Q = [a_1,b_1]\times[a_2,b_2]\times[a_n,b_n]$
+\item[component interval of $Q$] $[a_i,b_i]$
+\item[volume of $Q$] $v(Q) = (b_1-a_1)(b_2-a_2)\cdots(b_n-a_n)$
+\item[partition] \TODO
+\item[subinterval(determined by $P$)] \OMIT
+\item[subrectangle(determined by $P$)] \OMIT
+\item[mech of $P$] \OMIT
+\item[refinement] \OMIT
+\item[common refinement] \OMIT
+\item[\NAMEMISSING] $m_R(f)=\inf\{f(x)|x\in R\}$
+\item[\NAMEMISSING] $M_R(f)=\inf\{f(x)|x\in R\}$
+\item[lower sum] $L(f, P)=\sum_R m_R(f)\cdot v(R)$
+\item[upper sum] $U(f, P)=\sum_R M_R(f)\cdot v(R)$
+\item[lower integral] $\underline{\int_Q}f=\sup_P\{L(f,P)\}$
+\item[upper integral] $\overline{\int_Q}f=\inf_P\{L(f,P)\}$
+\item[oscillation] \TODO
+\item[rectifiable set] A bounded set $S\in\bR^n$ is rectifiable if the constant function 1 is integrable over $S$.
+\extranote{S is rectifiable iff S is bounded and $\mathrm{Bd}S$ has measure zero}
+\item[volume of a rectifiable set] $v(S)=\int_S 1$
+\end{description}
+
+
+\subsection{Riemann condition}
+Given: \VAR{$Q$} a rectangle, \VAR{$f$} $: Q\to \bR$ a bounded function.
+
+\fbox{$\underline{\int_Q}f = \overline{\int_Q}f$ iff $\forall\epsilon_{>0}\exists P[U(f, P)-L(f, P)\leq\epsilon]$}
+
+\extranote{$P$ is a partion of $Q$}
+
+\extranote{Corollary/Theorem: every constant function is integrable.}
+
+\subsection{Riemann-Lebesgue theorem}
+A function on a compact interval [a, b] is Riemann integrable if and only if it is bounded and continuous almost everywhere (the set of its points of discontinuity has measure zero, in the sense of Lebesgue measure).
+\WIKILINK{http://en.wikipedia.org/wiki/Riemann_integral\#Riemann_integral}
+\MUNKERSREF{11.2}
+
+
+\subsection{Fundamental theorem of Calculus}
+\begin{itemize}
+\item
+	If $f$ is continuous on $[a, b]$, and if $F(X)=\int_a^x f$
+	for $x\in[a,b]$, then $F'(x)$ exists and equals $f(x)$.
+\item
+	If $f$ is continious on $[a, b]$,
+	and if $g$ is a function such that
+	$g'(x)=f(x)$ for $x\in[a,b]$ then $\int_a^b f = g(b) - g(a)$
+\end{itemize}
+
+
+\subsection{Fubini's theorem}
+Let $Q=A\times B$, where $A$ is a rectangle in $\bR^k$ and $A$ is a rectangle in $\bR^n$.
+If f is bounded function and integrable over $Q$, then
+$\underline{\int_{y\in B}} f(x,y)$ and $\overline{\int_{y\in B}} f(x,y)$ are integrable over $A$
+and
+\[\int_Q f = \int_{x\in A}\underline{\int_{y\in B}} f(x,y) = \int_{x\in A}\overline{\int_{y\in B}} f(x,y)\]
+
+\subsection{Properties of integral}
+\TODO
+\subsection{Properties of rectifiable set}
+\TODO
+

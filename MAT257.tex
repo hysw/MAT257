@@ -1,57 +1,30 @@
-\documentclass[letterpaper,14pt]{extarticle}
-% twoside,landscape,twocolumn,
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = blue, %Colour for external hyperlinks
-  linkcolor    = blue, %Colour of internal links
-  citecolor   = red %Colour of citations
-}
-\input{math/packet.tex}
-\input{math/math.tex}
-\input{math/title.tex}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\usepackage{datetime}
-\usepackage{fancyhdr}
-%\usepackage[nomain,acronym,xindy,toc]{glossaries}
-%\makeglossaries
-%\usepackage[xindy]{imakeidx}
-%\makeindex
-
-\newcommand{\refto}[1]{\{#1\}}
-\newcommand{\extranote}[1]{{\color{Black!30}#1}}
-\newcommand{\thmIF}{\textbf{\color{Red!50!Black}IF}}
-\newcommand{\thmTHEN}{\textbf{\color{Blue!50!Black}THEN}}
-
-\title{UofT-MAT257-2014 Note}
-\author{hysw, etc(will add later)...}
-\date{\today\\ at \currenttime}
-
-\pagestyle{fancy}
-\lhead{Page \thepage}
-\rfoot{}
-\cfoot{}
-\lfoot{}
-%\rfoot{Compiled on \today\ at \currenttime}
-%\cfoot{}
-%\lfoot{Page \thepage}
-
+\documentclass[letterpaper,12pt,twocolumn]{extarticle}
+\input{macro/packages.tex}
+\input{macro/symbols.tex}
+\input{macro/hyperref.tex}
+\input{macro/useless.tex}
+\input{macro/marks.tex}
+\makeindex
 \begin{document}
 
 \maketitle
 
 \tableofcontents
 
-\include{basic}
-\include{linear_algebra}
-\include{topology}
-\include{measure_theory}
-\include{calculus_general}
-\include{calculus_differential}
-\include{calculus_integral}
-\include{test1}
-\include{todo}
-\include{copyright}
+\include{content/keywords}
+\include{content/basic}
+\include{content/linear_algebra}
+\include{content/topology}
+\include{content/measure_theory}
+\include{content/calculus_general}
+\include{content/calculus_differential}
+\include{content/calculus_integral}
+\include{content/calculus_chg_of_vars}
+\include{content/manifold}
+
+% \include{content/test1}
+% \include{content/todo}
+% \include{content/copyright}
 %\printglossaries
 %\printindex
 \end{document}

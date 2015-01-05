@@ -1,3 +1,5 @@
+USELESSPOSTFIX=aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg
+
 all: MAT257.pdf clean_useless
 
 pdf: MAT257.pdf
@@ -9,7 +11,7 @@ MAT257.pdf: *.tex
 	pdflatex MAT257.tex
 
 clean_useless:
-	rm -f *.{aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg} *~
+	rm -f *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} *~
 
 clean: clean_useless
 	rm -f *.pdf
