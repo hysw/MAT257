@@ -1,14 +1,33 @@
 \section{Change of Variables}
-\TODO
-\section{Diffeomorphism}
 
-\TODO Thm 17.1 from Munkers is some what weird.
+\Anchor{def:diffeomorphism}
+\TheoremName{Diffeomorphism} \WIKILINK{http://en.wikipedia.org/wiki/Diffeomorphism}
 
-% somewhat weird
-% \subsection{Change of variables theorem}
-% Let $g:A \to B$ be a continuously differentiable ($\cC^1$) function,
-% and $f:B \to \bR$ is continuous function then
-% \fbox{$\int_B f=\int_a(g\circ g)\cdot g'$}.
-% If $g$ is also a bijection, then \fbox{$\int_B f=\int_a(g\circ g)|\det Dg|$}.
-% \extranote{$f$ is integrable over $B$ iff $(g\circ g)|\det Dg|$ is integrable over $A$}
+$f: A\to B$ is a diffeomorphism if
+$f$ is a bijection AND $f$ and $f^{-1}$ are of class $C^r$.
 
+\extranote{Moreover $f$ is called $C^r$-diffeomorphism}
+
+\Anchor{thm:changeofvars}
+\TheoremName{Change of Variables Theorem} \MUNKERSREF{17.2}
+\begin{tTheorem}
+\tLET
+opensets $U, V \subseteq \bR$\newline
+$g: U\to V$ a \hyperref[kw:diffeomorphism]{diffeomorphism}\newline
+$f:V\to \bR$ be a continuous function
+\tTHEN f is intergrable over $B$\newline
+  \IFF $(f\circ g)|\det D g|$ is integrable over $A$
+\tNOTE $\int_B f = \int_A(f\circ g)|\det D g|$
+\end{tTheorem}
+
+\Anchor{thm:substitutionrule}
+\TheoremName{Substitution rule} \MUNKERSREF{17.1}
+\begin{tTheorem}
+\tLET
+$I=[a,b], J=[c,d]\subseteq\bR$\newline
+$g:I\to J$ of class $C^1$\newline
+$f:J\to \bR$ is continuous
+\tIF $\forall x\in(a,b) \left[g'(x)\neq 0\right]$
+\tTHEN $\int^{g(b)}_{g(a)}f=\int^b_a (f\circ g)g'$\newline
+equivalently $\int_J f=\int_I (f\circ g)|g'|$
+\end{tTheorem}

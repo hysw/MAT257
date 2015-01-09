@@ -1,0 +1,81 @@
+% notetaker    : dmitri
+% proofreader  :
+
+\subsection{2015-01-05 Monday}
+\subsubsection{Review}
+\THM{rectifiable}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded  \\
+\THEN S is rectifiable \\
+\IFF $\partial \mathrm{S}$ has measure zero, equivalently $\chi_s$ is integrable\\
+\IDEA rectifiable is a property of the boundary of a set. If the boundary has measure zero then the set is rectifiable.\\
+
+\DEFN{volume}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded and \textit{rectifiable}\\
+\THEN define the volume of S as:\\
+$V(S):=\int_{\mathrm{S}}1:=\int_{\mathrm{Q}}\chi_x$\\
+
+\THM{partition of unity}
+\LET $\mathrm{A}\subset\mathbb{R}^n$,
+$\{\mathrm{U}_\alpha\}_{\alpha\in\mathcal{A}}$ be an open cover of A\\
+\THEN $\exists$ a collection of $C^\infty$ functions $\{\psi_\beta\}_{\beta\in\mathcal{B}}$ s.t
+\begin{myenumerate}
+\item $\forall x\in\mathrm{A}\quad 0<\psi_\beta\leq1\quad\forall\beta\in\mathcal{B}$
+\item $\forall x\in\mathrm{A}\quad\exists$ open neighbourhood V of $x$ such that:\\
+  all but finitely many $\psi_\beta$ vanish on V (\textit{locally finite})
+\item $\forall x\in\mathrm{A}\quad\sum_{\beta\in\mathcal{B}}\psi_\beta(x)\equiv 1$
+\item $\forall x\in\mathrm{A}\quad\exists\;\alpha$ such that\\
+  $\mathrm{supp}(\psi_\beta)\subset\mathrm{U}_\alpha$, ie
+  $\{x|\psi_\beta(x)\neq0\}\subset\mathrm{U}_\alpha$
+\end{myenumerate}
+A collection of functions satisfying i, ii, iii is called a \textit{partition of unity}\\
+It is \textit{subordinate} to the open cover $\{\mathrm{U}_\alpha\}_{\alpha\in\mathcal{A}}$
+if it satisfies condition iv
+
+
+\subsubsection{Open Sets}
+\DEFN{extended integral}
+\LET $\mathrm{U}^{open}\subset\mathbb{R}^n$,
+$f:\mathrm{U}\to\mathbb{R}$ is continuous\\
+\IF $f\geq 0$\\
+\THEN define then \textit{extended integral} of $f$ over U as:\\
+$\int_{\mathrm{u}}f := \sup\{\int_{\mathrm{D}}f\:|\:
+\mathrm{D}\subset\mathrm{U}\text{ where } \mathrm{D}\text{ is compact, rectifiable} \}$\\
+\IF $f$ is arbitrary and
+ $\int_{\mathrm{u}}f_+,\;\int_{\mathrm{u}}f_-$ exist\\
+\THEN define then \textit{extended integral} of $f$ over U as:\\
+$\int_{\mathrm{u}}f:=\int_{\mathrm{u}}f_+-\int_{\mathrm{u}}f_-$ where\\
+$f_+(x)=\max\{f(x),0\}$ and $f_-(x)=\min\{-f(x), 0\}$\\
+
+\THM{mnk 15.2}
+\LET $\mathrm{U}^{open}\subset\mathbb{R}^n$,
+$f:\mathrm{U}\to\mathbb{R}$ is continuous\\
+Choose an exhaustion of U by compact $K_i$ such that\\
+$K_1\subset K_2^{\circ}\subset K_2\subset K_3^{\circ}\ldots$\\
+\THEN $f$ has an \textit{extended integral} defined as:\\
+$\int_{\mathrm{u}}f:=\sum_{i=1}^{\infty}(\int_{\mathrm{u}}\psi_if)$\\
+\IFF $\sum\int_{\mathrm{u}}\psi_i|f|$ converges to a finite number\\
+
+\RMK
+If $\mathrm{U}^{open}\subset\mathbb{R}^n$, then $\int_{\mathrm{u}}f$ refers to the
+\textit{extended integral}\\
+
+\THM{mnk 15.4}
+\LET
+ $\mathrm{U^{open}}$ is bounded,
+$f:\mathrm{U}\to\mathbb{R}^n $ is bounded and continuous\\
+\THEN
+\begin{myenumerate}
+\item the extended integral exists
+\item if the ordinary integral exists, then they are equal
+\end{myenumerate}
+
+\THM{mnk 16.5}
+\LET
+$\mathrm{U}^{open}\subset\mathbb{R}^n$,
+$f:\mathrm{U}\to\mathbb{R}$ is continuous,
+$\{\psi_i\}$ be a partition of unity with compact support\\
+\THEN $\int_{\mathrm{u}}f$ exists\\
+\IFF $\sum_{i=1}^{\infty}\int_{\mathrm{u}}\psi_i|f|$ converges to a finite number\\
+In this case $\int_{\mathrm{u}}f =\sum\limits_{i=1}^
+\infty(\int_{\mathrm{u}}\psi_i f)$\\
+

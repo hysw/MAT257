@@ -2,5 +2,33 @@
 \newcommand{\TODO}{{\textit{\color{red}TODO}}}
 \newcommand{\NAMEMISSING}{{?-}}
 \newcommand{\VAR}[1]{{#1}}
+\newcommand{\WEBLINK}[2]{\textsuperscript{\href{#2}{[#1]}}}
 \newcommand{\WIKILINK}[1]{\textsuperscript{\href{#1}{[wiki]}}}
 \newcommand{\MUNKERSREF}[1]{\textsuperscript{\color{cyan}[#1]}}
+
+
+
+
+\newcommand{\zlen}[1]{\setlength{#1}{0pt}}
+
+\newenvironment{tTheorem}
+{\begin{description}\zlen{\itemsep}\zlen{\parskip}\zlen{\parsep}}
+{\end{description}}
+
+\newcommand{\tITEMGEN}[2]{\item[\color{#2}#1]}
+\newcommand{\tLET}{\tITEMGEN{LET}{ForestGreen!50!Black}}
+\newcommand{\tIF}{\tITEMGEN{IF}{Red!50!Black}}
+\newcommand{\tTHEN}{\tITEMGEN{THEN}{Blue!50!Black}}
+\newcommand{\tNOTE}{\tITEMGEN{NOTE}{Violet!50!Black}}
+\newcommand{\tTODO}{\tITEMGEN{TODO}{Red}}
+
+\newcommand{\TheoremName}[1]{\texttt{\large #1}}
+\newcommand{\Anchor}[1]{\phantomsection\label{#1}}
+%\newcommand{\IF}{\noindent\textbf{\color{Red!50!Black}IF }}
+%\newcommand{\IFF}{\noindent\textbf{\color{Red!50!Black}IFF }}
+%\newcommand{\THEN}{\noindent\textbf{\color{Blue!50!Black}THEN} : }
+%\newcommand{\THM}[1]{\noindent\textbf{\color{Brown!50!Black}THM} : \texttt{#1}\\}
+%\newcommand{\RMK}{\noindent\textbf{\color{Brown!50!Black}RMK} : }
+%\newcommand{\IDEA}{\noindent\textbf{\color{Violet!50!Black}IDEA} : }
+
+%\newcommand{\NOTE}{\noindent\textbf{\color{Violet!50!Black}NOTE} : }
