@@ -49,11 +49,12 @@ $f_+(x)=\max\{f(x),0\}$ and $f_-(x)=\min\{-f(x), 0\}$\\
 \THM{mnk 15.2}
 \LET $\mathrm{U}^{open}\subset\mathbb{R}^n$,
 $f:\mathrm{U}\to\mathbb{R}$ is continuous\\
-Choose an exhaustion of U by compact $K_i$ such that\\
-$K_1\subset K_2^{\circ}\subset K_2\subset K_3^{\circ}\ldots$\\
-\THEN $f$ has an \textit{extended integral} defined as:\\
-$\int_{\mathrm{u}}f:=\sum_{i=1}^{\infty}(\int_{\mathrm{u}}\psi_if)$\\
-\IFF $\sum\int_{\mathrm{u}}\psi_i|f|$ converges to a finite number\\
+Choose an \textit{exhaustion} of U by compact $K_i$ such that\\
+$K_1\subset K_2^{\circ}\subset K_2\subset K_3^{\circ}\ldots$ and 
+$\mathrm{U}=\cup_{i=1}^{\infty}\mathrm{K}_i$\\
+$f$ has an \textit{extended integral}\\
+\IFF $\{|f_i|\}_{i=1}^{\infty}$ restricted to $\mathrm{K}_i$ is bounded\\
+\THEN $\int_{\mathrm{u}}f=\lim_{i\to\infty}\int_{\mathrm{k}_i}f$\\
 
 \RMK
 If $\mathrm{U}^{open}\subset\mathbb{R}^n$, then $\int_{\mathrm{u}}f$ refers to the
