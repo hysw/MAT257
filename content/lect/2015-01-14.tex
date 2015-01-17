@@ -1,0 +1,78 @@
+% notetaker    : dmitri
+% proofreader  :
+
+\subsection{2015-01-07 Wednesday}
+\subsubsection{Existence of the Integral}
+\DEFN{integral}
+\LET Q be a rectangle, $f:\mathrm{Q}\to\mathbb{R}$ be a bounded function, define:\\
+$\overline{\int}_{\mathrm{Q}} f := \inf\{L(f, \mathrm{P})\}$ as the upper integral\\
+$\underline{\int}_{\mathrm{Q}} f := \sup\{L(f, \mathrm{P})\}$ as the lower integral\\
+\IF then the upper and lower sums agree\\
+\THEN f is \textit{integrable} over Q\\
+
+\THM{Riemann Condition}
+\LET Q be a rectangle, $f:\mathrm{Q}\to\mathbb{R}$ be a bbd fn\\
+\THEN upper and lower integral agree\\
+\IFF given $\epsilon>0$ there is a partition P such that:\\
+$U(f,P) - L(f,P)\leq\epsilon$\\
+\IDEA necessary condition for the existence\\
+
+\THM{mnk 11.2}
+\LET $\mathrm{Q}\subset\mathbb{R}^n$, $f:\mathrm{Q}\to\mathbb{R}$ be a bounded function.\\
+Define D to be the set of points for which f fails to be continuous\\
+\THEN $\int_{Q} f$ exists\\
+\IFF D has measure zero (f is \textit{almost continuous everywhere})\\
+
+\THM{mnk 11.3}
+\LET $\mathrm{Q}\subset\mathbb{R}^n$, 
+$f:\mathrm{Q}\to\mathbb{R}$.
+Assume $f$ is \textit{integrable}\\
+\IF $f$ vanishes except on a set of measure zero\\
+\THEN $\int_{\mathrm{Q}}f = 0$\\
+\IF $f$ is non-negative and $\int_{\mathrm{Q}}f = 0$\\
+\THEN $f=0$ almost everywhere
+
+\subsubsection{Evaluation of the Integral}
+\THM{Fundamental Theory of Calculus}
+\LET $f:\mathrm{[a,b]}\to\mathbb{R}$ be continuous\\
+\IF $F(x)=\int_a^xf(x)$ for $x\in[a,b]$\\
+\THEN $D\int_a^xf=f(x)$\\
+\IF $g$ is a function such that $g'(x)=f(x)\;\forall x$\\
+\THEN $\int_a^x Dg = g(x)-g(a)$\\
+
+\THM{Fubini's Theorem}
+\LET $\mathrm{Q}=\mathrm{A}\times\mathrm{B}$,
+where $\mathrm{A}\subset\mathbb{R}^k$ and
+$\mathrm{B}\subset\mathbb{R}^n$.\\
+$f:\mathrm{Q}\to\mathbb{R}$ be bdd,
+write $f(x,y)$ for $x\in\mathrm{A}$ and 
+$y\in\mathrm{B}$.\\
+For each $x\in\mathrm{A}$ consider upper and lower integrals\\
+$\underline{\int}_{y\in\mathrm{B}}f(x,y)$ and
+$\overline{\int}_{y\in\mathrm{B}}f(x,y)$\\
+\IF $f$ is integrable over Q\\
+\THEN these two functions are integrable over $\mathrm{Q}$ and
+$\int_{\mathrm{Q}}f = \int_{x\in\mathrm{A}}\underline{\int}_{y\in\mathrm{B}}f(x,y) =
+\int_{x\in\mathrm{A}}\overline{\int}_{y\in\mathrm{B}}f(x,y)$
+
+
+\vfill
+\subsubsection{Integral Over a Bounded Set}
+\THM{mnk 13.5}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded, 
+$f:\mathrm{S}\to\mathbb{R}$ be bounded and continuous function.
+Define E to be the set of all points $x_0\in\partial S$ for which the condition
+$\lim_{x\to x_0} f(x) = 0$ fails\\
+\IF E has measure zero\\
+\THEN $f$ is integrable over S\\
+Converse also holds\\
+
+\THM{mnk 13.6}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded, 
+$f:\mathrm{S}\to\mathbb{R}$ be bounded and continuous function, 
+and $\mathrm{A}=\mathrm{S}^{\circ}$.\\
+\IF f is integrable over S\\
+\THEN f is integrable over A and\\ 
+$\int_{\mathrm{S}} f = \int_{\mathrm{A}}f$
+
+\subsubsection{Rectifiable Sets}
