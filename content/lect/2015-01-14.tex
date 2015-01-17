@@ -2,6 +2,7 @@
 % proofreader  :
 
 \subsection{2015-01-07 Wednesday}
+Second test review
 \subsubsection{Existence of the Integral}
 \DEFN{integral}
 \LET Q be a rectangle, $f:\mathrm{Q}\to\mathbb{R}$ be a bounded function, define:\\
@@ -76,3 +77,62 @@ and $\mathrm{A}=\mathrm{S}^{\circ}$.\\
 $\int_{\mathrm{S}} f = \int_{\mathrm{A}}f$
 
 \subsubsection{Rectifiable Sets}
+
+\THM{mnk 14.1}
+\LET $\mathrm{S}\subset\mathbb{R}^n$
+\THEN S is \textit{rectifiable} \\
+\IFF S bounded and $\partial S$ has measure zero \\
+
+\THM{mnk 14.2}
+Properties of rectifiable sets
+\begin{myenumerate}
+\item (Positivity). If S is rectifiable, $v(\mathrm{S})\geq 0$
+\item (Monotonicity). If $\mathrm{S}_1$ and $\mathrm{S}_2$ are rectifiable with\\ 
+$\mathrm{S}_1\subset\mathrm{S}_2$ then $v(\mathrm{S}_1)\leq v(\mathrm{S}_2)$
+\item (Additivity). If $\mathrm{S}_1$ and $\mathrm{S}_2$ are rectifiable so are,\\
+$\mathrm{S}_1\cup\mathrm{S}_2$ and $\mathrm{S}_1\cap\mathrm{S}_2$
+\item Suppose S is rectifiable. Then $v(\mathrm{S})=0$ iff S has measure zero
+\item If S is rectifiable, so is $\mathrm{S^{\circ}}$ and $v(\mathrm{S})=v(\mathrm{S}^{\circ})$
+\item If S is rectifiable, and $f:\mathrm{S}\to\mathbb{R}$ is bounded continuous, 
+then $f$ is integrable over S.
+\end{myenumerate}
+
+
+\DEFN{simple region}
+\LET C be a compact and rectifiable set in $\mathbb{R}^{n-1}$,\\
+$\phi,\psi:\mathrm{C}\to\mathbb{R}$ be continuous functions such that\\ 
+$\phi(x)\leq\psi(x)\;\forall x\in\mathrm{C}$.\\
+\THEN $\mathrm{S}\subset\mathbb{R}^n$ defined as \\
+$\mathrm{S}:=\{(x,t)|x\in\mathrm{C}\text{ and } \phi(x)\leq t\leq\psi{x}\}$\\
+is a simple region.
+\newpage
+
+\THM{Fubini's Theorem for Simple Regions}
+\LET 
+$\mathrm{S}=\{(x,t)| x\in\mathrm{C}\text{ and } \phi(x)\leq t\leq\psi(s)\}$
+be a simple region in $\mathbb{R}^n$ and let
+$f:\mathrm{S}\to\mathbb{R}$ be a continuous function\\
+\THEN $f$ is integrable over S and\\
+$$\int_{\mathrm{S}}f = \int_{x\in\mathrm{c}}\int_{t=\phi(s)}^{t=\psi(x)}f(x,t)$$
+
+\subsubsection{Extended Integrals}
+Three definitions of the extended integral:
+\begin{myenumerate}
+\item\hyperref[defn:extended integral]{Extended Integral 1}
+\item\hyperref[thm:mnk 15.2]{Extended Integral 2}
+\item\hyperref[thm:mnk 16.5]{Extended Integral 3}
+\end{myenumerate}
+
+\THM{mnk 15.4}
+\LET
+ $\mathrm{U^{open}}$ is bounded,
+$f:\mathrm{U}\to\mathbb{R}^n $ is bounded and continuous\\
+\THEN
+\begin{myenumerate}
+\item the extended integral exists
+\item if the ordinary integral exists, then they are equal
+\end{myenumerate}
+
+\subsubsection{Change of Variables}
+\TODO
+
