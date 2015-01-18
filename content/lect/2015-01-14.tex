@@ -125,7 +125,7 @@ Three definitions of the extended integral:
 
 \THM{mnk 15.4}
 \LET
- $\mathrm{U^{open}}$ is bounded,
+$\mathrm{U^{open}}$ is bounded,
 $f:\mathrm{U}\to\mathbb{R}^n $ is bounded and continuous\\
 \THEN
 \begin{myenumerate}
@@ -134,5 +134,28 @@ $f:\mathrm{U}\to\mathbb{R}^n $ is bounded and continuous\\
 \end{myenumerate}
 
 \subsubsection{Change of Variables}
-\TODO
+% copy/paste/format from Change of Variable section
+
+\DEFN{diffeomorphism}
+$f: A\to B$ is a diffeomorphism if
+$f$ is a bijection AND $f$ and $f^{-1}$ are of class $C^r$.
+
+\THM{Change of Variables}
+\LET
+opensets $U, V \subseteq \bR$\newline
+$g: U\to V$ a \hyperref[kw:diffeomorphism]{diffeomorphism}\newline
+$f:V\to \bR$ be a continuous function\newline
+\THEN f is intergrable over $B$\newline
+\IFF $(f\circ g)|\det D g|$ is integrable over $A$\\
+\RMK $\int_B f = \int_A(f\circ g)|\det D g|$
+
+\THM{Substitution Rule}
+\LET
+$I=[a,b], J=[c,d]\subseteq\bR$\newline
+$g:I\to J$ of class $C^1$\newline
+$f:J\to \bR$ is continuous\newline
+\IF $\forall x\in(a,b) \left[g'(x)\neq 0\right]$\\
+\THEN $\int^{g(b)}_{g(a)}f=\int^b_a (f\circ g)g'$\newline
+equivalently $\int_J f=\int_I (f\circ g)|g'|$
+
 
