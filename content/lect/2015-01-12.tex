@@ -1,0 +1,68 @@
+% notetaker    : angela			
+% proofreader  :
+
+\subsection{2015-01-12 Monday}
+\subsubsection{Torus}
+
+Problem: Find the volume of the solid torus given by 
+$$\{(x,y,z)|(\sqrt{x^2+y^2}-b)^2+2^2\leq a\}$$
+
+When $y=0$, $(x-b)^2+z^2\leq$ is the circle centered at $(b,0,0)$ in the $(x,z)$ plane with radius $a$.
+
+For angle $0<\varphi<2\pi$, parametrize the circle by
+\begin{itemize}
+\item $x=b+a\text{cos}\varphi$
+\item $z=a\text{sin}\varphi$
+\end{itemize}
+and for $0<\rho< a$ and  parametrize the disc by
+\begin{itemize}
+\item $x=b+\rho\text{cos}\varphi$
+\item $z=\rho\text{sin}\varphi$
+\end{itemize}
+
+This defines a diffeomorphism from $(0,a)\times(0,2\pi)\rightarrow$ disc with slit removed.  Now rotate around z axis.  For $0<\theta<2\pi$:
+\begin{itemize}
+\item $x=(b+\rho\text{cos}\varphi)\text{cos}\theta$
+\item $y=(b+\rho\text{cos}\varphi)\text{sin}\theta$
+\item $z=\rho\text{sin}\varphi$
+\end{itemize}
+
+We want $G(\rho,\varphi,\theta):=(x,y,z)$, so 
+$G(\rho,\varphi,\theta)\rightarrow\{(\sqrt{x^2+y^2}-b)^2+2^2< a\}  \backslash(T\cap\{x>0,y=0\})\cup(T\cap\{z=0\cap x^2+y^2\geq b^2\})$
+is a diffeomorphism.
+
+Notice that the set we have removed has measure 0 (First part $\subset\{y=0\}$ which has measure 0 and second part $\subset\{z=0\}$ which has measure 0).
+
+Thus, $\text{Vol}(T)=$volume of the image of $G$ (they differ by a set of measure 0).
+
+So $\chi_T\equiv\chi_{G(R)}$ except on a set of measure 0.
+
+Apply change of variables!
+
+First check if $G$ is a diffeomorphism:
+
+$G$ is a bijection by construction.
+
+\begin{align*}
+DG=&\left[ 
+\begin{array}{ccc}
+\text{cos}\varphi\text{cos}\theta  & -\rho\text{sin}\varphi\text{cos}\theta & (b+\rho\text{cos}\varphi)\text{cos}\theta\\
+\text{cos}\varphi\text{sin}\theta &  -\rho\text{sin}\varphi\text{sin}\theta & (b+\rho\text{cos}\varphi)\text{sin}\theta \\
+\text{sin}\varphi & \rho\text{cos}\varphi  &  0\\
+\end{array} \right]\\
+|DG|=&-(b+\rho\text{cos}\varphi)\text{sin}\theta(\rho\text{cos}^2\varphi\text{sin}\theta+\rho\text{sin}^2\varphi)\text{cos}\theta)\\
+&-(b+\rho\text{cos}\varphi)\text{cos}\theta(\rho\text{cos}^2\varphi\text{cos}\theta+\rho\text{sin}^2\varphi)\text{cos}\theta)\\
+=&-(b+\rho\text{cos}\varphi)\rho \\
+\neq& 0
+\end{align*}
+
+Thus $G$ is a diffeomorphism of open sets.
+
+Then by change of variables,
+$$\int_{G(R)}1=\int_R1|DG|=\int_{(0,a)\times(0,2\pi)\times(0,2\pi)}\rho(b+\rho\text{cos}\theta)$$
+
+Then by Fubini's theorem:
+$$\int^a_{\rho=0}\int_0^{2\pi}\int_0^{2\pi}\rho(b+\rho\text{cos}\varphi)=4\pi^2\int_0^a\rho b=2\pi^2a^2b$$
+
+That's the torus!
+
