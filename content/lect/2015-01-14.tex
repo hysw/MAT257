@@ -1,0 +1,138 @@
+% notetaker    : dmitri
+% proofreader  :
+
+\subsection{2015-01-07 Wednesday}
+Second test review
+\subsubsection{Existence of the Integral}
+\DEFN{integral}
+\LET Q be a rectangle, $f:\mathrm{Q}\to\mathbb{R}$ be a bounded function, define:\\
+$\overline{\int}_{\mathrm{Q}} f := \inf\{L(f, \mathrm{P})\}$ as the upper integral\\
+$\underline{\int}_{\mathrm{Q}} f := \sup\{L(f, \mathrm{P})\}$ as the lower integral\\
+\IF then the upper and lower sums agree\\
+\THEN f is \textit{integrable} over Q\\
+
+\THM{Riemann Condition}
+\LET Q be a rectangle, $f:\mathrm{Q}\to\mathbb{R}$ be a bbd fn\\
+\THEN upper and lower integral agree\\
+\IFF given $\epsilon>0$ there is a partition P such that:\\
+$U(f,P) - L(f,P)\leq\epsilon$\\
+\IDEA necessary condition for the existence\\
+
+\THM{mnk 11.2}
+\LET $\mathrm{Q}\subset\mathbb{R}^n$, $f:\mathrm{Q}\to\mathbb{R}$ be a bounded function.\\
+Define D to be the set of points for which f fails to be continuous\\
+\THEN $\int_{Q} f$ exists\\
+\IFF D has measure zero (f is \textit{almost continuous everywhere})\\
+
+\THM{mnk 11.3}
+\LET $\mathrm{Q}\subset\mathbb{R}^n$, 
+$f:\mathrm{Q}\to\mathbb{R}$.
+Assume $f$ is \textit{integrable}\\
+\IF $f$ vanishes except on a set of measure zero\\
+\THEN $\int_{\mathrm{Q}}f = 0$\\
+\IF $f$ is non-negative and $\int_{\mathrm{Q}}f = 0$\\
+\THEN $f=0$ almost everywhere
+
+\subsubsection{Evaluation of the Integral}
+\THM{Fundamental Theory of Calculus}
+\LET $f:\mathrm{[a,b]}\to\mathbb{R}$ be continuous\\
+\IF $F(x)=\int_a^xf(x)$ for $x\in[a,b]$\\
+\THEN $D\int_a^xf=f(x)$\\
+\IF $g$ is a function such that $g'(x)=f(x)\;\forall x$\\
+\THEN $\int_a^x Dg = g(x)-g(a)$\\
+
+\THM{Fubini's Theorem}
+\LET $\mathrm{Q}=\mathrm{A}\times\mathrm{B}$,
+where $\mathrm{A}\subset\mathbb{R}^k$ and
+$\mathrm{B}\subset\mathbb{R}^n$.\\
+$f:\mathrm{Q}\to\mathbb{R}$ be bdd,
+write $f(x,y)$ for $x\in\mathrm{A}$ and 
+$y\in\mathrm{B}$.\\
+For each $x\in\mathrm{A}$ consider upper and lower integrals\\
+$\underline{\int}_{y\in\mathrm{B}}f(x,y)$ and
+$\overline{\int}_{y\in\mathrm{B}}f(x,y)$\\
+\IF $f$ is integrable over Q\\
+\THEN these two functions are integrable over $\mathrm{Q}$ and
+$\int_{\mathrm{Q}}f = \int_{x\in\mathrm{A}}\underline{\int}_{y\in\mathrm{B}}f(x,y) =
+\int_{x\in\mathrm{A}}\overline{\int}_{y\in\mathrm{B}}f(x,y)$
+
+
+\vfill
+\subsubsection{Integral Over a Bounded Set}
+\THM{mnk 13.5}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded, 
+$f:\mathrm{S}\to\mathbb{R}$ be bounded and continuous function.
+Define E to be the set of all points $x_0\in\partial S$ for which the condition
+$\lim_{x\to x_0} f(x) = 0$ fails\\
+\IF E has measure zero\\
+\THEN $f$ is integrable over S\\
+Converse also holds\\
+
+\THM{mnk 13.6}
+\LET $\mathrm{S}\subset\mathbb{R}^n$ be bounded, 
+$f:\mathrm{S}\to\mathbb{R}$ be bounded and continuous function, 
+and $\mathrm{A}=\mathrm{S}^{\circ}$.\\
+\IF f is integrable over S\\
+\THEN f is integrable over A and\\ 
+$\int_{\mathrm{S}} f = \int_{\mathrm{A}}f$
+
+\subsubsection{Rectifiable Sets}
+
+\THM{mnk 14.1}
+\LET $\mathrm{S}\subset\mathbb{R}^n$
+\THEN S is \textit{rectifiable} \\
+\IFF S bounded and $\partial S$ has measure zero \\
+
+\THM{mnk 14.2}
+Properties of rectifiable sets
+\begin{myenumerate}
+\item (Positivity). If S is rectifiable, $v(\mathrm{S})\geq 0$
+\item (Monotonicity). If $\mathrm{S}_1$ and $\mathrm{S}_2$ are rectifiable with\\ 
+$\mathrm{S}_1\subset\mathrm{S}_2$ then $v(\mathrm{S}_1)\leq v(\mathrm{S}_2)$
+\item (Additivity). If $\mathrm{S}_1$ and $\mathrm{S}_2$ are rectifiable so are,\\
+$\mathrm{S}_1\cup\mathrm{S}_2$ and $\mathrm{S}_1\cap\mathrm{S}_2$
+\item Suppose S is rectifiable. Then $v(\mathrm{S})=0$ iff S has measure zero
+\item If S is rectifiable, so is $\mathrm{S^{\circ}}$ and $v(\mathrm{S})=v(\mathrm{S}^{\circ})$
+\item If S is rectifiable, and $f:\mathrm{S}\to\mathbb{R}$ is bounded continuous, 
+then $f$ is integrable over S.
+\end{myenumerate}
+
+
+\DEFN{simple region}
+\LET C be a compact and rectifiable set in $\mathbb{R}^{n-1}$,\\
+$\phi,\psi:\mathrm{C}\to\mathbb{R}$ be continuous functions such that\\ 
+$\phi(x)\leq\psi(x)\;\forall x\in\mathrm{C}$.\\
+\THEN $\mathrm{S}\subset\mathbb{R}^n$ defined as \\
+$\mathrm{S}:=\{(x,t)|x\in\mathrm{C}\text{ and } \phi(x)\leq t\leq\psi{x}\}$\\
+is a simple region.
+\newpage
+
+\THM{Fubini's Theorem for Simple Regions}
+\LET 
+$\mathrm{S}=\{(x,t)| x\in\mathrm{C}\text{ and } \phi(x)\leq t\leq\psi(s)\}$
+be a simple region in $\mathbb{R}^n$ and let
+$f:\mathrm{S}\to\mathbb{R}$ be a continuous function\\
+\THEN $f$ is integrable over S and\\
+$$\int_{\mathrm{S}}f = \int_{x\in\mathrm{c}}\int_{t=\phi(s)}^{t=\psi(x)}f(x,t)$$
+
+\subsubsection{Extended Integrals}
+Three definitions of the extended integral:
+\begin{myenumerate}
+\item\hyperref[defn:extended integral]{Extended Integral 1}
+\item\hyperref[thm:mnk 15.2]{Extended Integral 2}
+\item\hyperref[thm:mnk 16.5]{Extended Integral 3}
+\end{myenumerate}
+
+\THM{mnk 15.4}
+\LET
+ $\mathrm{U^{open}}$ is bounded,
+$f:\mathrm{U}\to\mathbb{R}^n $ is bounded and continuous\\
+\THEN
+\begin{myenumerate}
+\item the extended integral exists
+\item if the ordinary integral exists, then they are equal
+\end{myenumerate}
+
+\subsubsection{Change of Variables}
+\TODO
+
