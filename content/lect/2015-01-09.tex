@@ -1,0 +1,27 @@
+% Hao
+
+\subsection{2015-01-09 Friday}
+
+\Anchor{thm:changeofvars}
+\TheoremName{Change of Variables Theorem} \MUNKERSREF{17.2}
+\begin{tTheorem}
+\tLET
+opensets $U, V \subseteq \bR$\newline
+$g: U\to V$ a \hyperref[kw:diffeomorphism]{diffeomorphism}\newline
+$f:V\to \bR$ be a continuous function
+\tTHEN f is intergrable over $B$\newline
+  \IFF $(f\circ g)|\det D g|$ is integrable over $A$
+\tNOTE $\int_B f = \int_A(f\circ g)|\det D g|$
+\end{tTheorem}
+\IDEA The theorem is proved in 5 steps.
+
+\begin{myenumerate}
+\item Let $g: U \to V$ and $h: V \to W$ be diffeomorphisms of open sets in $\mathbb{R}^n$. Show that if the theorem holds for $g$ and $h$, then it holds for $g \circ h$. The idea is to show that $\int_W f = \int_V (f \circ h)|\det Dh| = \int_U (f \circ h \circ g)|(\det Dh) \circ g| |\det Dg| = \int_U (f \circ h \circ g)|\det (h \circ g)|$
+\item Suppose that for each $x \in A$, there is a neighborhood $U$ of $x$ contained in $A$ such that the lemma holds for the diffeomorphism $g: U \to V$ where $V = g(U)$ and all continues functions $f: V \to \mathbb{R}$ whose supports are compact subsets of $V$. Then show that the lemma holds for $g$. This basically means: show that if the lemma holds lically for $g$ and fuctions $f$ having compact support, then it holds for all $g$ and all $f$. The idea is to find a partition of unity ${\phi_i}$ of $B$ with compact support and show that the collection ${\phi_i \circ g}$ is a partition of unity on $A$ having compact support. Then use the fact that $\int_B f = \sum_{i = 1}^{infty} \int_B (\phi_i)(f)$.
+\item Show the the lemma holds for $n = 1$. This can be done by showing that the theorem holds for the interiors of all closed intervals contained in $A$ then applying step 2.
+\item We only need to prove the theorem for primitive diffeomorphisms. This is because, when restricted to a small enough neighbourhood, all diffeomorphisms are a composition of primitive diffeomorphisms. Step 1 shows that the validity of the theorem is preserved by composition. Step 2 shows that if the theorem holds on all the small neighbourhoods in $A$ then it holds for all of $A$.
+\item Show that if the lemma holds in dimension $n-1$, it holds in dimension $n$. Due to step 4, we only need to prove this for primitive diffeomorphisms. 
+\end{myenumerate}
+
+
+
