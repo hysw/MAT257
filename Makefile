@@ -23,7 +23,7 @@ MAT257.pdf: *.tex
 
 clean_useless:
 	#rm -f *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} *~
-	$(RM) *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} *~
+	$(RM) *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} */*/*.{$(USELESSPOSTFIX)} *~
 
 clean: clean_useless
 	#rm -f *.pdf

@@ -1,44 +1,69 @@
 \section{Integral Calculus}
 Note, Riemann Integral was taught in this class.
 
+\hyperref[measure_zero]{Measure Zero}
+
 
 \subsection{Definitions}
 \begin{description}
 \item[rectangle (in $\bR^n$)] $Q = [a_1,b_1]\times[a_2,b_2]\times[a_n,b_n]$
 \item[component interval of $Q$] $[a_i,b_i]$
 \item[volume of $Q$] $v(Q) = (b_1-a_1)(b_2-a_2)\cdots(b_n-a_n)$
-\item[partition] \TODO
+\item[partition] (of $[a, b]$) a finite collection of points of $[a,b]$ includes the points a, b
+\item[partition] (of $Q$) n-tuple $(P_1, \ldots, P_n)$
 \item[subinterval(determined by $P$)] \OMIT
 \item[subrectangle(determined by $P$)] \OMIT
 \item[mech of $P$] \OMIT
 \item[refinement] \OMIT
 \item[common refinement] \OMIT
-\item[\NAMEMISSING] $m_R(f)=\inf\{f(x)|x\in R\}$
-\item[\NAMEMISSING] $M_R(f)=\inf\{f(x)|x\in R\}$
-\item[lower sum] $L(f, P)=\sum_R m_R(f)\cdot v(R)$
-\item[upper sum] $U(f, P)=\sum_R M_R(f)\cdot v(R)$
+\item[lower sum] $L(f, P)=\sum_R m_R(f)\cdot v(R)$\hfill\\
+	where $m_R(f)=\inf\{f(x)|x\in R\}$
+\item[upper sum] $U(f, P)=\sum_R M_R(f)\cdot v(R)$\hfill\\
+	where $M_R(f)=\inf\{f(x)|x\in R\}$
 \item[lower integral] $\underline{\int_Q}f=\sup_P\{L(f,P)\}$
 \item[upper integral] $\overline{\int_Q}f=\inf_P\{L(f,P)\}$
 \item[oscillation] \TODO
 \item[rectifiable set] A bounded set $S\in\bR^n$ is rectifiable if the constant function 1 is integrable over $S$.
 \extranote{S is rectifiable iff S is bounded and $\mathrm{Bd}S$ has measure zero}
 \item[volume of a rectifiable set] $v(S)=\int_S 1$
+\item[simple region] Let $C$ be a compact rectifiable in $R^{n-1}$;
+	Let $\phi, \psi:C\to R$ be continuous function such that $\phi(x) \leq \psi(x)$ for $x\in C$.
+	The subset $\{(x, t)|x\in C\wedge \phi(x) \leq t \leq \psi(x)\}$ is called a simple region in $R^n$.
 \end{description}
 
 
+\subsection{Ignored}
+\begin{itemize}
+\item Lemma 10.1: Munker p83.
+\item Lemma 10.2: Munker p84.
+\item Corollary 10.5: Munker p84.
+\item Lemma 13.1: Munker p104.
+\item Lemma 13.2: Munker p105.
+\item Lemma 14.3: Munker p114. a simple region is compact and rectifiable.
+\end{itemize}
+
+
 \subsection{Riemann condition}
-Given: \VAR{$Q$} a rectangle, \VAR{$f$} $: Q\to \bR$ a bounded function.
-
-\fbox{$\underline{\int_Q}f = \overline{\int_Q}f$ iff $\forall\epsilon_{>0}\exists P[U(f, P)-L(f, P)\leq\epsilon]$}
-
-\extranote{$P$ is a partion of $Q$}
+Given: \VAR{$Q$} a rectangle, \VAR{$f$} $: Q\to \bR$ a bounded function. Then
+$\underline{\int_Q}f = \overline{\int_Q}f$ iff
+given $\epsilon>0$ there exist a partion $P$ of $Q$ for which
+$\forall\epsilon_{>0}\exists P[U(f, P)-L(f, P)\leq\epsilon]$
 
 \extranote{Corollary/Theorem: every constant function is integrable.}
+
 
 \subsection{Riemann-Lebesgue theorem}
 A function on a compact interval [a, b] is Riemann integrable if and only if it is bounded and continuous almost everywhere (the set of its points of discontinuity has measure zero, in the sense of Lebesgue measure).
 \WIKILINK{http://en.wikipedia.org/wiki/Riemann_integral\#Riemann_integral}
-\MUNKERSREF{11.2}
+\MUNKERSREF{Munkers 11.2}
+
+\subsection{Munkers 11.3}
+Let $Q$ be a rectangle in $R^n$; let $f:Q \to \bR$; assume $f$ is integrable over $Q$.
+\begin{itemize}
+\item If $f$ vanishes except on a set of measure zero, then $\int_Q f=0$.
+\item If $f$ is non-negative and if $\int_Q f=0$, then $f$ vanishes except on a set of measure zero.
+\end{itemize}
+
 
 
 \subsection{Fundamental theorem of Calculus}
@@ -60,8 +85,18 @@ $\underline{\int_{y\in B}} f(x,y)$ and $\overline{\int_{y\in B}} f(x,y)$ are int
 and
 \[\int_Q f = \int_{x\in A}\underline{\int_{y\in B}} f(x,y) = \int_{x\in A}\overline{\int_{y\in B}} f(x,y)\]
 
+\subsubsection{For simple regions}
+\TODO\MUNKERSREF{Munkers 14.4}
+
+\[\int_S f = \int_{x\in C}\int_{t=\phi(x)}^{t=\psi(x)} f(x,t)\]
+
+
 \subsection{Properties of integral}
-\TODO
+\TODO\MUNKERSREF{Munkers 13.3}
+
+\subsection{Properties of integral}
+\TODO A set S is rectifiable iff S is bounded and has measure zero boundary.\MUNKERSREF{Munkers 14.1}
+
 \subsection{Properties of rectifiable set}
-\TODO
+\TODO\MUNKERSREF{Munkers 14.2}
 

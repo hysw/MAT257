@@ -1,6 +1,7 @@
 \section{Measure Theory}
 
 \subsection{Measure zero}
+	\label{measure_zero}
 	Let $A\subseteq \mathbb{R}^n$. We say $A$ has \underline{measure zero}
 	in $\mathbb{R}^n$ if for every $\epsilon>0$, there is a covering $Q_1, Q_2, \dots$ of $A$
 	by countably many rectangles such that
@@ -16,5 +17,8 @@
   \item If $B \subseteq A$ and $A$ has measure zero in $\mathbb{R}^n$, the so does B.
   \item Let $A$ be the union of the collection of sets
         $A_1, A_2, \ldots$ If each $A_i$ has measure zero, so does $A$.
-  \item A set $A$ has measure zero in $\mathbb{R}^n$ if and only i
+  \item A set $A$ has measure zero in $\mathbb{R}^n$ if and only if for every $\epsilon > 0$,
+  there is a countable covering if $A$ by open rectangles $Int Q_1, Int Q_2, \ldots$ such that
+  $\sum v(Q_i)<\epsilon$
+  \item If $Q$ is a rectangles in $R^n$ then $Bd Q$ has measure zero in $R^n$.
 \end{enumerate}
