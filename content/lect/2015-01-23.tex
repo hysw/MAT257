@@ -1,0 +1,108 @@
+% notetaker    : angela			
+% proofreader  :
+
+\subsection{2015-01-23 Friday}
+\subsubsection{Definition of Volume}
+
+Parametrize the manifold $Y=\alpha(A)$.
+
+Define $v(Y)=\int_Y 1=\int_A v(D_{\alpha})$ where $v(D_{\alpha})=$ the volume of the parallelopiped determined by columns of $D_{\alpha}=\sqrt{\text{det}(D_{\alpha})^T D_{\alpha}}$
+
+We need to check if this is a reasonable definition: it must be independent of parametrization.
+
+Suppose $h:\mathbb{R}^n\rightarrow\mathbb{R}^n$, $h$ linear such that $(D_h)^TD_h)=I$ (in particular, h is an isometry, ie. it preserves distances, areas, ...).
+
+Let $z=h(y)=h\circ \alpha (A)$.
+
+Then $v(Z)=v(Y)$ since $D(h\circ \alpha )= D_h\cdot D_{\alpha}$.
+
+Suppose $\alpha(x)=y=y+Ax$ for some matrix A (parametrized plane).  Then it's true.
+
+Eg.  
+\begin{align*}
+y&= \left( \begin{array}{c}
+1 \\
+2 \\
+3 \end{array} \right)+ \left( \begin{array}{cc}
+2 & 1 \\
+1 & 3 \\
+1 & 1 \end{array} \right)x\\
+\alpha(0,0)&=\left( \begin{array}{c}
+1 \\
+2 \\
+3 \end{array} \right)\\
+\alpha(s,0)&=\left( \begin{array}{c}
+1 \\
+2 \\
+3 \end{array} \right)+s \left( \begin{array}{c}
+2 \\
+1 \\
+1 \end{array} \right)\\
+\alpha(0,t)&=\left( \begin{array}{c}
+1 \\
+2 \\
+3 \end{array} \right)+t \left( \begin{array}{c}
+1 \\
+3 \\
+1 \end{array} \right)
+\end{align*}
+
+Then the volume of the parallelopiped is $\sqrt{\text{det}(D_{\alpha})^T D_{\alpha}}$.
+
+Triangulate the surface:
+
+Eg. 
+Finding the length of a curve $\gamma: [0,1]\rightarrow \mathbb{R}^2$.
+By our definition, $v(\Gamma)=L(\Gamma)=\int_0^1\sqrt{\text{det}(D_{\gamma})^T D_{\gamma}}dt$
+
+$D_{\gamma}= \left( \begin{array}{c}
+\frac{dx}{dt} \\
+\frac{dy}{dt} \end{array} \right)$
+
+\begin{align*}
+(D_{\gamma})^TD_{\gamma}&= \left( \begin{array}{cc}
+\frac{dx}{dt} & \frac{dy}{dt} \end{array} \right) \left( \begin{array}{c}
+\frac{dx}{dt} \\
+\frac{dy}{dt} \end{array} \right)\\
+&= (\frac{dx}{dt})^2+(\frac{dy}{dt})^2\\
+&=\gamma'\cdot\gamma'\\
+&=||\gamma'||^2
+\sqrt{\text{det}(D_{\gamma})^T D_{\gamma}}&=||\gamma'(t)||
+\end{align*}
+
+So our definition reduces to $L(\Gamma)=\int_0^1||\gamma'(t)||dt$.  Now to evaluate it.
+
+By our definition of integrals, there exists a partition $t_0=0,...,t_n=1$ such that
+$$\sum\limits_{i=1}^n((M_i||\gamma'||)-m_i(||\gamma'||))\cdot \Delta t_i < \epsilon$$
+
+In this case, $L(\Gamma)-\sum\limits_{i=1}^n||\gamma'(t_i)||\cdot\Delta t_i < \epsilon$.
+
+On the other hand, consider the piecewise liner approximations to the image.  Find the points $\gamma(t_i)$ and connect the dots.
+
+The length of the piecewise linear approximation is $\sum\limits_i\sqrt{(\Delta x_i)^2+(\Delta y_i)^2}$,
+where
+\begin{align*}
+\Delta x_i &= x(t_i)-x(t_{i-1})\\
+&= x'(c_i) \cdot \Delta t_i \text{ for some } c_i\in (t_i,t_{i-1})\\
+\Delta y_i &= y(t_i)-y(t_{i-1})\\
+&= y'(d_i) \cdot \Delta t_i \text{ for some } d_i\in (t_i,t_{i-1})
+\end{align*}
+
+Now in general, $c_i\neq d_i$.  Then,
+\begin{align*}
+& \sum\limits_{i=1}^n\sqrt{(\Delta x_i)^2+(\Delta y_i)^2}\\
+= & \sum\limits_{i=1}^n\sqrt{(x'(c_i))^2(\Delta t_i)^2+(y'(d_i))^2(\Delta t_i)^2}\\
+= & \sum\limits_{i=1}^n\sqrt{(x'(c_i))^2+(y'(d_i))^2}\cdot\Delta t_i
+\end{align*}
+
+Now use $\gamma$ is continuous on $[0,1]$.  Thus $\gamma$ is uniformly continuous.
+Therefore there exists $\delta$ such that $|\Delta t_i|< \delta$ implies that $|c_i-t_i|<\delta$ and $|d_i-t_i|<\delta$
+Thus, $|x'(c_i)-x'(t_i)|<\epsilon$ and $|y'(d_i)-y'(t_i)|<\epsilon$.
+
+Thus, 
+$$|\sum\limits_{i=1}^n\sqrt{(x'(c_i))^2+(y'(d_i))^2}\cdot\Delta t_i-\sum\limits_{i=1}^n ||\gamma'(t_i)||\Delta t_i| <\epsilon$$
+
+Thus, 
+$$|L(\gamma)-\text{length of piecewise approximations}|<\epsilon$$
+
+
