@@ -1,0 +1,36 @@
+% notetaker    : Hao			
+% proofreader  :
+
+\subsection{2015-01-28 Wednesday}
+\subsubsection{Man-I-Fold}
+
+\textbf{Definition} Let $k > 0$. Suppose $M$ is a subspace of $\mathbb{R}^n$ (where $n \geq k$) having the following property: For each $p \in M$, there is a set $V$ containing $p$ that is open in $M$, a set $U$ that is open in $\mathbb{R}^k$, and a continuous map $\alpha:U \to V$ carrying $U$ onto $V$ in a one-to-one fashion, such that:
+\begin{enumerate}
+\item $\alpha$ is of class $C^r$
+\item $\alpha^{-1}: V \to U$ is continuous.
+\item $D\alpha(x)$ has rank $k$ for each $x \in U$.
+\end{enumerate}
+\textbf{Definition} We say that $M \subset \mathbb{R}^n$ is locally a graph around $p \in M$ if
+\begin{itemize}
+\item There exists a reordering of the variables
+\item There exists a neighbourhood of $A \times B$ of p with $A$ open in $\mathbb{R}^k$ and $B$ open in $\mathbb{R}^{n-k}$.
+\item There exists a $C^r$ map $\varphi: A \to B$ s.t. $M \cap (A \times B) = \{(y, \varphi(y))|y \in A\}$ (The graph of $\varphi$)
+\end{itemize}
+\textbf{Remark} Let $F: A \times B \to \mathbb{R}^{n-k}$ where $F(y, z) = z - \varphi(y)$. Then $M \cap (A \times B) = \{x \in A - B | F(X) = 0\}$ i.e. $M$ is defined implicitly. Note $\frac{\partial F}{\partial z} \neq 0$.
+\newline\newline
+\textbf{Remark} By IFT, if $M \cap (A \times B) = \{(y,z) | F(y, z) = 0\}$ and $\frac{\partial F}{\partial z} \neq 0$, then we can solve $z = \varphi(y)$.
+\newline\newline
+\textbf{Proposition} Let $M$ be a $k$-dimensional manifold in $\mathbb{R}^n$. Then $M$ is locally a graph at $p\in M$.
+\newline\newline
+\textbf{Proof} Choose an open set $V$ containing $p$. Choose an open subset $U$ of $\mathbb{R}^k$ and a function $\alpha: U \to V$ of class $C^r$.
+
+Then $D \alpha$ has rank $k \implies \exists$ a reordering of the variables $(y,z) \in \mathbb{R}^n$ such that
+\begin{align*}
+x \to \alpha(x) = (y, z) \to \pi(y, z) = y
+\end{align*}
+Where $\pi$ is a projection function. Then $\pi \circ \alpha$ is locally a diffeomorphism (bijection of rank k). Let $(\pi \circ \alpha) = F^{-1}$.
+
+Therefore $\alpha \circ F: A \to B$ is $C^r$ and $\alpha \circ F(y) = (y, \varphi(y))$ for some $\varphi \in C^r$. 
+\newline\newline
+\textbf{Definition} Let $M^k \subset \mathbb{R}^n$ be a manifold of dimension $k$ and regularity $r$ and let $f:M \to \mathbb{R}$ be a function. $f$ is said to be $C^q$ in a neightbourhood of $p \in M$ if $f \circ \alpha$ is $C^q$ where $\alpha$ is the coordinite chart for this neighbourhood.
+\newline\newline
