@@ -1,0 +1,32 @@
+% notetaker    : Hao			
+% proofreader  :
+
+\subsection{2015-01-21 Wednesday}
+\subsubsection{Midterm Review}
+\textbf{Extra Practice Problem 7 a)} If $f: [a, b] \times [c,d] \to \mathbb{R}$ is continuous, and $D_2f$ is continuous, define $F(x, y) = \int_a^x f(t,y)dt$. Find $D_1F$ and $D_2F$.
+\newline\newline
+\textbf{Solution} $D_1F = f(x, y)$. Now calculate $D_2F$.
+
+Fix $y \in [c,d]$ and $y+h \in [c,d]$ and calculate:
+\begin{align*}
+\frac{F(x,y+h) - F(x,y)}{h} = \int_a^x \frac{f(t, y+h) - f(t, y)}{h} dt \\
+\end{align*}
+$D_2f$ is continuous $\implies$ $D_2f$ is uniform continuous. $\forall t, y, h, \exists c \in (0, 1)$ such that:
+
+\begin{align*}
+\frac{F(x,y+h) - F(x,y)}{h} = D_2f(t,y+ch) \\
+\end{align*}
+
+$D_2f$ is uniform continuous $\implies \forall \varepsilon > 0 \ \exists \delta > 0$ such that $|h| < \delta \implies |D_2f(t, y+ch) - D_2f(t,y)| < \varepsilon$.
+
+therefore for $|h| < \delta$
+
+\begin{align*}
+&|\frac{F(x,y+h) - F(x,y)}{h} - \int_a^x D_2f(t,y) dt| \\
+&\leq \int_a^x |\frac{f(x,y+h) - f(x,y)}{h} - D_2f(t,y)| dt\\
+&\leq \int_a^x \varepsilon dt \\
+&\leq \varepsilon (b-a) \\
+&\text{Therefore } \lim_{h \to 0} (\frac{F(x,y+h) - F(x,y)}{h} - \int_a^x D_2f(t,y) dt) = 0 \\
+&\text{So }D_2F = \int_a^x D_2f(t, y) dt
+\end{align*}
+
