@@ -1,1 +1,41 @@
 \section{Manifolds}
+\TODO
+
+Gram-Schmidt process
+
+\MUNKERSREF{21.2}
+
+Let $W$ be a k-dimensional linear subspace of $\bR^n$.
+There is an orthogonal transformation $h:\bR^n\to\bR^n$ that carries
+$W$ onto the subspace $\bR^k\times 0$ of $\bR^n$.
+
+\MUNKERSREF{21.3}
+
+There is a unique function $V$ that assigns,
+to each k-tuple $(x_1,\ldots, x_k)$ of $\bR^n$, a non-negative number such that:
+\begin{enumerate}
+\item If $h:\bR^n\to\bR^n$ is an orthogonal transformation, then $V(h(x_1),\ldots, h(x_k)) = V(x_1,\ldots, x_k)$
+\item If $y_1,\ldots,y_k$ belong to the subspace $R^k\times 0$ of $R^n$, so that $y_i=(x_i, 0)$ for $z_i\in \bR^k$ then $V(y_1,\ldots, y_k) = |\det [z_1\cdots z_k]|$
+\end{enumerate}
+The function $V$ vanishes if and only if the vectors $x_1,\ldots, x_k$ are dependent.
+It satisfies the equation $V(x_1,\ldots,x_k)=[\det(X^{tr}\cdot X)]^\frac{1}{2}$
+where $X$ is the n by k matrix $X=[x_1\cdots x_k]$
+
+\TODO p182, k-dimensional volume
+
+\TODO p184 THM21.4
+
+\subsection{Parametrized Manifold}
+\begin{description}
+\item[parametrized-manifold] - $Y_\alpha$\hfill\\
+Let $k\leq n$, open set $A\subseteq\bR^k$, $C^r(r\geq 1)$ function $\alpha:A\to \bR^n$.
+The set $Y=\alpha(A)$, together with the map $\alpha$, constitute what is called parametrized-manifold, of dimension k.
+
+\item[(k-dimensional) volume of $Y_\alpha$]\hfill\\
+$v(Y_\alpha) = \int_A V(D \alpha)$
+(provide the integral exists)
+\end{description}
+
+\TODO see 2015-01-23 note
+
+\TODO p189 def
