@@ -1,0 +1,26 @@
+\section{Tensors}
+
+Let $V$ be a vector space. Define $V^k=\underbrace{V\times\ldots\times V}_{k}$, denote all k-tuple of vectors of $V$.
+
+A function is linear in $i$\textsuperscript{th} variable if given vector $v_j$ for $j\neq i$ the function defined by ...\TODO
+
+\begin{description}
+\item[multilinear function]
+A function $f$ is multilinear if it is linear in $i$\textsuperscript{th} variable for each $i$.
+\item[k-tensor/tensor of order $k$] A multilinear funciton of $V^k$.
+\item[$\cL^k(V)$] The set of all k-tensors on $V$.
+\item[$V^*$] $\cL^1(V)$, \kw{dual space} of $V$.
+\item[elementary tensor]
+\end{description}
+
+\TODO
+THM26.1
+THM26.2
+
+\theorem{26.3}
+
+Let $V$ be a vector space with basis $a_1, \ldots, a_n$.
+Let $I=(i_1, \ldots, i_n)$ be a k-tuple of integers from set $\{1,\ldots, n\}$.
+There is a unique k-tensor $\phi_I$ on $V$ such that for every tuple $J=(j_1, \ldots, j_n)$, such that
+\[\phi(a_{j_1},\ldots,a_{j_n})=\begin{cases}1&\text{if }I=J\\0&\text{if }I\neq J\end{cases}\]
+The tensors $\phi_I$ form a basis for $\cL^k(V)$.
