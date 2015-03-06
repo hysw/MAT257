@@ -17,7 +17,7 @@ pdf: MAT257.pdf
 
 MAT257.pdf: *.tex
 	pdflatex MAT257.tex
-	# texindy MAT257.idx
+	texindy MAT257.idx
 	# note, run twice to ensure indexing is correct
 	pdflatex MAT257.tex
 
