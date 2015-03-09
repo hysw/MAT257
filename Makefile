@@ -9,7 +9,9 @@ else
 endif
 
 
-USELESSPOSTFIX=aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg
+USELESSPOSTFIX=aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg,stc*,mtc*,maf*
+USELESSMATCH=*~ sop
+
 
 all: MAT257.pdf clean_useless
 
@@ -23,7 +25,7 @@ MAT257.pdf: *.tex
 
 clean_useless:
 	#rm -f *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} *~
-	$(RM) *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} */*/*.{$(USELESSPOSTFIX)} *~
+	$(RM) *.{$(USELESSPOSTFIX)} */*.{$(USELESSPOSTFIX)} */*/*.{$(USELESSPOSTFIX)} $(USELESSMATCH)
 
 clean: clean_useless
 	#rm -f *.pdf
