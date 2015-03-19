@@ -2,23 +2,29 @@
 
 \secttoc
 
-\subsection{Defination}
+\subsection{Definition}
 
 \begin{description}
-\item[$V^k$]
+\item[k-fold product $V^k$]
 Let $V$ be a vector space. Define $V^k=\underbrace{V\times\ldots\times V}_{k}$, denote all k-tuple of vectors of $V$.
-\item[linear in i \textsuperscript{th} variable]
-A function is linear in $i$\textsuperscript{th} variable if given vector $v_j$ for $j\neq i$ the function defined by ...\TODO
 \item[multilinear function]
-A function $f$ is multilinear if it is linear in $i$\textsuperscript{th} variable for each $i$.
-\item[k-tensor/tensor of order $k$] A multilinear funciton of $V^k$.
+A function $f$ is multilinear if\\
+$\begin{aligned}f(v_1, \ldots, v_i+v_i',\ldots, v_n)
+                & = f(v_1, \ldots, v_i,\ldots, v_n)\\
+                & + f(v_1, \ldots, v_i',\ldots, v_n)\end{aligned}$\\
+and\\
+$f(v_1, \ldots, av_i',\ldots, v_n)
+  = af(v_1, \ldots, v_i,\ldots, v_n)$
+\item[k-tensor] A multilinear function $f:V^k\to\bR$ is called a k-tensor on $V$. (also called tensor of order $k$)
 \item[$\cL^k(V)$] The set of all k-tensors on $V$.
 \item[$V^*\equiv \cL^1(V)$] \kw{dual space} of $V$.
 \item[elementary tensor] $\phi_I$
 \item[tensor product] $f\otimes g$
-\item[dual transformation] $T^*:\cL^k(W)\to\cL^k(V)$
+\item[exterior product] $\Lambda^k(W)$
 \end{description}
 
+
+\TODO inner product
 \subsection{Elementary Tensor}
 \MUNKRESREF{26.3}
 
@@ -36,25 +42,58 @@ define $(f\otimes g)\in\cL^{k+l}(V)$ by
 \[(f\otimes g)(v_1,\ldots,v_{k+l})=f(v_1,\ldots,v_k)\cdot g(v_{k+1},\ldots,v_{k+l})\]
 $f\otimes g$ is multilinear and is called \kw{tensor product} of $f$ and $g$.
 
-
-Properties:
+\subsubsection{Properties of tensor product}
 \begin{description}
 \item[Associativity] $f\otimes(g\otimes h)=(f\otimes g)\otimes h$
 \item[Homogeneity] $cf\otimes g=c(f\otimes g)=f\otimes (cg)$
 \item[Distributivity] Suppose $f,g\in \cL^k(V), h\in \cL^l(V)$ then
 	\[(f+g)\otimes h=f\otimes h+g\otimes h\]
 	\[h\otimes (f+g)=h\otimes f+h\otimes g\]
-\item[$\circ$] Given a basis $a_1,\ldots,a_n$ for $V$, the corrisponding elementary tensor $\phi_I$ satisfy the equation
-\[\phi_I=\phi_{i_1}\otimes\cdots\otimes\phi_{i_k}\]
 \end{description}
+Given a basis $a_1,\ldots,a_n$ for $V$, the corrisponding elementary tensor $\phi_I$ satisfy the equation
+\[\phi_I=\phi_{i_1}\otimes\cdots\otimes\phi_{i_k}\]
 
 \subsection{Dual Transformation}
 Suppose $T:V\to W$, define \kw{dual transformation} $T^*:\cL^k(W)\to\cL^k(V)$
-by \[(T^*f)(v_1,\ldots,v_k)=f(T(v_1),\ldots,T(v_k))\].
+by \[(T^*f)(v_1,\ldots,v_k)=f(T(v_1),\ldots,T(v_k))\]
 
+\subsection{Symmetric Tensors}
+A tensor $f\in\cL^k(V)$ is called symmetric if\\
+$f(v_1, \ldots, v_i, v_{i+1},\ldots, v_n) = f(v_1, \ldots, v_{i+1}, v_i,\ldots, v_n)$
+
+\subsection{Alternating Tensors}
+A tensor $f\in\cL^k(V)$ is called alternating if\\
+$f(v_1, \ldots, v_i, v_{i+1},\ldots, v_n) = -f(v_1, \ldots, v_{i+1}, v_i,\ldots, v_n)$
+
+The set of all alternating k-tensor is denoted $\cA^k(V)$ (Munkres use the notation $\cA^k(V)$).
+
+\subsubsection{Exterior Algebra}
+\TODO
+
+\subsection{Wedge Product}
+$\mathrm{Alt}(f)=\frac{1}{k!}A(f)=\sum_\sigma(\mathrm{sgn} \sigma)\cdot f^\sigma$
+
+\extranote{Note that $\mathrm{Alt}$ was used in Spivak and $A$ was used in Munkres.}
+
+Define wedge product by $f\wedge g = \frac{1}{k!l!}A(f\otimes g)$
+
+\extranote{In Spivak's book $f\wedge g = \frac{(k+l)!}{k!l!}\mathrm{Alt}(f\otimes g)$.}
+\subsubsection{Properties of wedge product}
+
+
+\begin{description}
+\item[Associativity] $f\wedge(g\wedge h)=(f\wedge g)\wedge h$
+\item[Homogeneity] $cf\wedge g=c(f\wedge g)=f\wedge (cg)$
+\item[Distributivity] Suppose $f,g\in \cL^k(V), h\in \cL^l(V)$ then\\
+	$(f+g)\wedge h=f\wedge h+g\wedge h$\\
+	$h\wedge (f+g)=h\wedge f+h\wedge g$
+\item[Anticommutativity] $f\in \cL^k(V), g\in \cL^l(V)$ then\\
+	$f \wedge g=(-1)^{kl}g \wedge f$
+\item[property 5 in Munkres] \TODO
+\end{description}
+
+\TODO $T^*(f\wedge g)=T^*f\wedge T^*g$
 
 \subsection{Theorems}
-\begin{description}
-\item[\theorem{26.1}] \TODO
-\item[\theorem{26.2}] \TODO
-\end{description}
+\theorem{26.1} \TODO
+\theorem{26.2} \TODO
